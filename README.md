@@ -110,11 +110,11 @@ Experimental block
 
 
 **3.1 Calling Initial Trial Duration from the Practice Block**
-- Controlled under *#adaptive or trial duration* in the *Begin Routine* of addData(_x) component 
+- Controlled under *#adaptive or trial duration* in the *Begin Routine* of addData_x component 
 - Location:  `experimentalTrial`
 
 **3.2 Adaptation Criteria (adaptive version only)**
-- Controlled under *#adaption* in *End Routine* of addData(_x) component (*Begin Routine* of endSetCode_2 component in Spatial-Figural Updating Task)
+- Controlled under *#adaption* in *End Routine* of addData_x component (*Begin Routine* of endSetCode_2 component in Spatial-Figural Updating Task)
 - Location:  `experimentalTrial` (`experimentalUpdateAccuracy_tot` in Spatial-Figural Updating Task)
 
 ---
