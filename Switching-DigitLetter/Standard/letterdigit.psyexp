@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2023.2.1">
+<PsychoPy2experiment encoding="utf-8" version="2025.1.1">
   <Settings>
-    <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
     <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
-    <Param val="{'participant': '02', 'task no.': '2'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'participant': ''}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -30,9 +29,12 @@
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
     <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
     <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
     <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
     <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
@@ -43,24 +45,31 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="NonADletterdigit" valType="str" updates="None" name="expName"/>
+    <Param val="standardLetterdigit" valType="str" updates="None" name="expName"/>
+    <Param val="" valType="str" updates="None" name="expVersion"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="debug" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
     <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
-    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
     <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
     <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
@@ -69,65 +78,6 @@
     <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
   </Settings>
   <Routines>
-    <Routine name="sequenceGeneration">
-      <RoutineSettingsComponent name="sequenceGeneration" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="sequenceGeneration" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="waitScreen" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="waitScreen" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Generating stimuli..." valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <CodeComponent name="stimuli" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/*&amp;#10;This script generates trial sequences for the n-back task*/&amp;#10;import * as pd from 'pandas';&amp;#10;var expectedResponse, letterPool, sequenceDataset, sequenceOk, sequenceRandom, threeconsletters, threeconsmatches, toggleSwitch, trialAll_num, trialMatch_num_expected, trialMatch_num_observed, trialMatch_observed;&amp;#10;letterPool = ([&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;, &quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;] * 2);&amp;#10;trialAll_num = 5;&amp;#10;trialMatch_num_expected = 1;&amp;#10;toggleSwitch = true;&amp;#10;while ((toggleSwitch === true)) {&amp;#10;    sequenceRandom = np.random.choice(letterPool, trialAll_num, true);&amp;#10;    trialMatch_observed = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)])) {&amp;#10;            trialMatch_observed[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    trialMatch_num_observed = util.sum(trialMatch_observed);&amp;#10;    threeconsletters = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if (((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 1)]) &amp;&amp; (sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)]))) {&amp;#10;            threeconsletters[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    threeconsmatches = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((util.sum(trialMatch_observed.slice((trialIdx - 2), (trialIdx + 1))) === 3)) {&amp;#10;            threeconsmatches[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((((trialMatch_num_observed === trialMatch_num_expected) &amp;&amp; (util.sum(threeconsmatches) === 0)) &amp;&amp; (util.sum(threeconsletters) === 0))) {&amp;#10;        toggleSwitch = false;&amp;#10;    }&amp;#10;}&amp;#10;sequenceOk = sequenceRandom;&amp;#10;expectedResponse = np.array(function () {&amp;#10;    var _pj_a = [], _pj_b = np.arange(trialAll_num);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var _ = _pj_b[_pj_c];&amp;#10;        _pj_a.push(&quot;key2use&quot;);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this));&amp;#10;expectedResponse[(trialMatch_observed === true)] = &quot;left&quot;;&amp;#10;expectedResponse[(trialMatch_observed === false)] = &quot;right&quot;;&amp;#10;sequenceDataset = new pd.DataFrame({&quot;trial&quot;: np.arange(1, (trialAll_num + 1)), &quot;letter&quot;: sequenceOk, &quot;nback_match&quot;: trialMatch_observed, &quot;expectedResponse&quot;: expectedResponse, &quot;observedResponse&quot;: np.nan, &quot;Accuracy&quot;: np.nan, &quot;RT_allTrials&quot;: np.nan, &quot;RT_correctTrials&quot;: np.nan});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="&quot;&quot;&quot;&amp;#10;GENERATE LISTS OF LETTER-DIGIT STIMULI&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;import numpy as np&amp;#10;import pandas as pd&amp;#10;&amp;#10;trialAll_num = 20#216 # number of trials (must be even)&amp;#10;trialSwitch_proportion = 1/2 # proportion of switch trials&amp;#10;trialSwitch_num_expected = trialAll_num * trialSwitch_proportion # num of switch trials&amp;#10;&amp;#10;# create trial column&amp;#10;trial = 1+np.arange(0,trialAll_num)&amp;#10;&amp;#10;# %% create switch column (list of 1 for &quot;switch&quot; and 0 for &quot;repeat&quot;) &amp;#10;# criteria:&amp;#10;# 1. the first trial is 999 (neither switch or repeat)&amp;#10;# 2. max two consecutive switch or repeat (which also means max 3 consecutive same task in case switch-repeat-repeat)&amp;#10;# 3. same number of Switch and Repeat (with a tolerance of 1 trial as the first one is neither switch or repeat)&amp;#10;&amp;#10;switch = np.empty(trialAll_num,dtype=int)   # initialize&amp;#10;task_digit = np.zeros(trialAll_num,dtype=int) # initialize&amp;#10;&amp;#10;toggleSwitch = 1&amp;#10;while toggleSwitch==1:&amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1:     &amp;#10;            switch[trialIdx] = -999  # Neither Switch or Repeat&amp;#10;            task_digit[trialIdx] = np.random.randint(0,2) # choose task at random&amp;#10;            &amp;#10;        else:&amp;#10;            # fill in the switch variable&amp;#10;            if trial[trialIdx]==2:   &amp;#10;                switch[trialIdx] = np.random.randint(0,2) # Random choice between 0 and 1&amp;#10;            else:&amp;#10;                if switch[trialIdx-1]==switch[trialIdx-2]:  # the previous two trials are the same&amp;#10;                    switch[trialIdx]=np.abs(switch[trialIdx-1]-1)  # opposite of previous trial: either 1 = abs(0-1)   or  0 = abs(1-1)&amp;#10;                else:&amp;#10;                    switch[trialIdx] = np.random.randint(0,2)&amp;#10;            &amp;#10;            # fill in the task_digit variable depending on the switch variable&amp;#10;            if switch[trialIdx]==1:&amp;#10;                task_digit[trialIdx] = np.abs(task_digit[trialIdx-1]-1) # opposite of the previous trial&amp;#10;            else:&amp;#10;                task_digit[trialIdx] = task_digit[trialIdx-1]&amp;#10;        &amp;#10;    # evaluate if number of Switch is half of trial number with a tolerance of 1&amp;#10;    if sum(switch==1)==(trialSwitch_num_expected) or sum(switch==1)==(trialSwitch_num_expected)-1:&amp;#10;        # evaluate if number of task_digit is 50% of trials. This means that digit and letter trials will be equally split in the block&amp;#10;        if sum(task_digit)==(trialSwitch_num_expected):&amp;#10;            toggleSwitch = 0&amp;#10;    &amp;#10;# letter task is the opposite of task_digit&amp;#10;task_letter = np.abs(task_digit-1)&amp;#10;&amp;#10;# create condition, task, color string variables&amp;#10;condition= np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;condition[np.where(switch==0)] = &quot;repeat&quot;&amp;#10;condition[np.where(switch==1)] = &quot;switch&quot;&amp;#10;&amp;#10;task     = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;task[np.where(task_digit)] = &quot;digit&quot;&amp;#10;task[np.where(task_letter)] = &quot;letter&quot;    &amp;#10;&amp;#10;color    = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;color[np.where(task_digit)] = &quot;purple&quot;      &amp;#10;color[np.where(task_letter)] = &quot;green&quot;&amp;#10;&amp;#10;colorHex = np.empty(trialAll_num,dtype=&quot;&lt;U7&quot;) # initialize &amp;#10;colorHex[np.where(task_digit)] = &quot;#FF00FF&quot;  # purple&amp;#10;colorHex[np.where(task_letter)] = &quot;#00FF00&quot;  # green  &amp;#10;&amp;#10;# %% create digit, letter, pair columns&amp;#10;# criteria&amp;#10;# 1. no same digit-letter pair (at least one of them is different) on two consecutive trials that have the same task (and same color)&amp;#10;# 2. when the same task is presented 3 times in a row (i.e., 1 switch followed by 2 repeat trials, yielding 3 consecutive letter trials) no more of 2 consecutive trials with the same response category (e.g., vowel)&amp;#10;# 3. each response category in same proportion&amp;#10;# 4. each digit (same for letter) is used at least 5% of the times &amp;#10;&amp;#10;&amp;#10;# pool of digit letter stimuli&amp;#10;letter_vowel_pool     = [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;]&amp;#10;letter_consonant_pool = [&quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;]&amp;#10;letter_pool = letter_vowel_pool + letter_consonant_pool&amp;#10;digit_even_pool = [2, 4, 6, 8]&amp;#10;digit_odd_pool =  [3, 5, 7, 9]&amp;#10;digit_pool = digit_even_pool + digit_odd_pool&amp;#10;&amp;#10;# initialize digit, letter, and pair columns&amp;#10;digit  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;letter = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;pair   = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;respCategory = np.empty(trialAll_num,dtype=&quot;&lt;U9&quot;) &amp;#10;&amp;#10;# initialize vowel, consonant, even, odd // as example, vowel will show 1 if the letter is vowel and 0 otherwise. These vars will be useful to count how many consecutive times we expect a certain response (e.g., vowel)&amp;#10;vowel      = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;consonant  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;even       = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;odd        = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;&amp;#10;toggleSwitch2 = 1&amp;#10;while toggleSwitch2==1:&amp;#10;    &amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1: # 1st trial&amp;#10;            # pick any digit and letter&amp;#10;            digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;            letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                &amp;#10;        elif trial[trialIdx]==2: # 2nd trial&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                if reduceChoice==1:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                elif reduceChoice==2:&amp;#10;                    digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                elif reduceChoice==3:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;         &amp;#10;        elif trial[trialIdx]&gt;=3: # 3rd trial and onwards&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                if respCategory[trialIdx-1]!=respCategory[trialIdx-2]:  # if response Category was not the same in the previous two trials --&gt; there is NO risk of having three times in a row the same response Category (e.g., vowel)&amp;#10;                    # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                    reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                    if reduceChoice==1:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif reduceChoice==2:&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                    elif reduceChoice==3:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;             &amp;#10;                else:    # if response Category was the same in the previous two trials --&gt; there is risk of having three times in a row the same response Category (e.g., vowel), so we need to exclude the stimuli compatible with this response category (e.g., all vowels)&amp;#10;                    # &quot;criteria 1 and 2&quot;                     &amp;#10;                    if respCategory[trialIdx-1]==&quot;vowel&quot;: &amp;#10;                        # pick any digit, but draw the letter from the consonant pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_consonant_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;consonant&quot;: &amp;#10;                        # pick any digit, but draw the letter from the vowel pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_vowel_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;even&quot;: &amp;#10;                        # pick any letter, but draw the digit from the odd pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_odd_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;odd&quot;: &amp;#10;                        # pick any letter, but draw the digit from the even pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_even_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;        # create pair of letter + digit&amp;#10;        pair[trialIdx] = letter[trialIdx] + str(digit[trialIdx]) &amp;#10;        &amp;#10;        # now that digit and letter have been chosen, update responseCategory. This will be useful for trialIdx+1&amp;#10;        if np.isin(letter[trialIdx],letter_vowel_pool):  vowel[trialIdx] = 1&amp;#10;        else:                                            vowel[trialIdx] = 0&amp;#10;        if np.isin(letter[trialIdx],letter_consonant_pool): consonant[trialIdx] = 1&amp;#10;        else:                                               consonant[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_even_pool):  even[trialIdx] = 1&amp;#10;        else:                                         even[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_odd_pool): odd[trialIdx] = 1&amp;#10;        else:                                       odd[trialIdx] = 0&amp;#10;        if task[trialIdx]==&quot;letter&quot;:&amp;#10;            if vowel[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;vowel&quot;&amp;#10;            elif consonant[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;consonant&quot;&amp;#10;        elif task[trialIdx]==&quot;digit&quot;:&amp;#10;            if even[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;even&quot;&amp;#10;            elif odd[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;odd&quot;&amp;#10;        &amp;#10;    # criterion &quot;3&quot;&amp;#10;    # multiply task_letter (1=letter task, 0=otherwise) with vowel(1=vowel, 0=otherwise). Their product will identify letter trials with vowel (i.e., it will ignore digit trials where the letter is a vowel). Same concept for the other 3 cases&amp;#10;    task_letter_vowel     = task_letter * vowel&amp;#10;    task_letter_consonant = task_letter * consonant&amp;#10;    task_digit_even       = task_digit * even&amp;#10;    task_digit_odd        = task_digit * odd&amp;#10;    # proportion of expected response, to make sure they are the same (0.25)&amp;#10;    proportionCheck  = np.zeros(4,dtype=&quot;float&quot;) # initialize&amp;#10;    proportionCheck[0] = sum(task_letter_vowel) / trialAll_num&amp;#10;    proportionCheck[1] = sum(task_letter_consonant) / trialAll_num&amp;#10;    proportionCheck[2] = sum(task_digit_even) / trialAll_num&amp;#10;    proportionCheck[3] = sum(task_digit_odd) / trialAll_num&amp;#10;    &amp;#10;    # &quot;criterion 4&quot;&amp;#10;    # check that each digit (same for letter) is picked at least 5% of the times &amp;#10;    digitProportion  = np.empty(len(digit_pool),dtype=float)     &amp;#10;    letterProportion = np.empty(len(letter_pool),dtype=float)     &amp;#10;    for poolIdx in np.arange(0,len(digit_pool)):&amp;#10;        digitProportion[poolIdx]  = sum(digit==digit_pool[poolIdx])/trialAll_num&amp;#10;        letterProportion[poolIdx] = sum(letter==letter_pool[poolIdx])/trialAll_num&amp;#10;    &amp;#10;    # implements the two checks above (keep asking for a new sequence if either of the two checks fails)&amp;#10;    if sum(proportionCheck==0.25)==4 and np.min(digitProportion)&gt;=0.05 and np.min(letterProportion)&gt;=0.05:&amp;#10;        toggleSwitch2 = 0    &amp;#10;     &amp;#10;&amp;#10;# %% create expectedResponse&amp;#10;# &quot;f&quot; = consonant &amp; odd&amp;#10;# &quot;j&quot; = vowel &amp; even&amp;#10;&amp;#10;expectedResponse = np.array(['key2press' for _ in np.arange(trialAll_num)])&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;even&quot;,respCategory==&quot;vowel&quot;)]     = &quot;j&quot;&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;odd&quot;, respCategory==&quot;consonant&quot;)] = &quot;f&quot;&amp;#10;&amp;#10;# %% create dataset&amp;#10;# build a dataframe from dictionary&amp;#10;&amp;#10;sequenceDataset= pd.DataFrame({'trial': trial,&amp;#10;                               'digit': digit,&amp;#10;                               'even': even,&amp;#10;                               'odd': odd,&amp;#10;                               'letter': letter,&amp;#10;                               'vowel': vowel,&amp;#10;                               'consonant': consonant,&amp;#10;                               'pair': pair,&amp;#10;                               'switch': switch, &amp;#10;                               'condition': condition,&amp;#10;                               'task': task,&amp;#10;                               'task_digit': task_digit,                               &amp;#10;                               'task_letter': task_letter,&amp;#10;                               'task_letter_vowel': task_letter_vowel,&amp;#10;                               'task_letter_consonant': task_letter_consonant,&amp;#10;                               'task_digit_even': task_digit_even,&amp;#10;                               'task_digit_odd': task_digit_odd,&amp;#10;                               'color': color,&amp;#10;                               'colorHex': colorHex,&amp;#10;                               'respCategory': respCategory,&amp;#10;                               'expectedResponse': expectedResponse,&amp;#10;                               'observedResponse': np.nan,&amp;#10;                               'Accuracy': np.nan,&amp;#10;                               'RT_allTrials': np.nan,&amp;#10;                               'RT_correctTrials': np.nan,&amp;#10;                               'trialDuration': np.nan,&amp;#10;                               'step': np.nan})&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="stimuli" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-    </Routine>
     <Routine name="practiceTrial">
       <RoutineSettingsComponent name="practiceTrial" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -137,6 +87,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="practiceTrial" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -166,6 +117,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Lucida Sans Typewriter" valType="str" updates="constant" name="font"/>
@@ -184,11 +136,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$str(sequenceDataset.pair[practiceBlock.thisN])" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="letterdigitResp" plugin="None">
         <Param val="'f','j'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$sequenceDataset.expectedResponse[practiceBlock.thisN]" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -215,6 +169,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="practiceTrial_feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -222,7 +177,7 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="fb_code" plugin="None">
+      <CodeComponent name="fbCode" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -237,19 +192,20 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="fb_code" valType="code" updates="None" name="name"/>
+        <Param val="fbCode" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="fb" plugin="None">
+      <TextComponent name="fbText" plugin="None">
         <Param val="$fb_col" valType="color" updates="set every repeat" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="2" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="fb" valType="code" updates="None" name="name"/>
+        <Param val="fbText" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
@@ -262,22 +218,29 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$fb_text" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <SoundComponent name="sound_1" plugin="None">
+      <SoundComponent name="fbSound" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
-        <Param val="sound_1" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="600" valType="str" updates="constant" name="sound"/>
+        <Param val="1" valType="code" updates="None" name="latencyClass"/>
+        <Param val="fbSound" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="str" updates="None" name="resample"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="600" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="str" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.050" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="sound_volume" valType="num" updates="set every repeat" name="volume"/>
       </SoundComponent>
     </Routine>
@@ -290,6 +253,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="practiceBlock_feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -297,7 +261,7 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="fb_code_2" plugin="None">
+      <CodeComponent name="fbCode_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -312,19 +276,20 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="if Practice_correctTrials_pct &gt;= 70:&amp;#10;    practiceRepetition.finished = True" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="fb_code_2" valType="code" updates="None" name="name"/>
+        <Param val="fbCode_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="fb_2" plugin="None">
+      <TextComponent name="fbText_2" plugin="None">
         <Param val="$fb_col" valType="color" updates="set every repeat" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="1.5" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="fb_2" valType="code" updates="None" name="name"/>
+        <Param val="fbText_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0.5)" valType="list" updates="constant" name="pos"/>
@@ -337,19 +302,21 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$msg&amp;#10;" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="instText_2" plugin="None">
+      <TextComponent name="fbInstText" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="instText_2" valType="code" updates="None" name="name"/>
+        <Param val="fbInstText" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, -0.5)" valType="list" updates="constant" name="pos"/>
@@ -360,18 +327,20 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="If your accuracy was less than 70% you will repeat the practice block.&amp;#10;&amp;#10;Press bar to continue" valType="str" updates="constant" name="text"/>
+        <Param val="If your accuracy was less than 70% &amp;#10;you will repeat the practice block&amp;#10;&amp;#10;Press bar to continue" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="moveOn" plugin="None">
+      <KeyboardComponent name="moveOn_4" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="moveOn" valType="code" updates="None" name="name"/>
+        <Param val="moveOn_4" valType="code" updates="None" name="name"/>
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -393,6 +362,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="experimentalTrial" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -406,14 +376,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;otherInfo.trial&quot;, sequenceDataset.trial[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.letter&quot;, sequenceDataset.letter[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.nback_match&quot;, sequenceDataset.nback_match[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.expectedResponse&quot;, sequenceDataset.expectedResponse[practiceBlock.thisN]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# adaptive duration&amp;#10;if sequenceDataset.trial[experimentalBlock.thisN]&lt;=2:&amp;#10;    #sequenceDataset.trialDuration[experimentalBlock.thisN] = 0.5 + Practice_correctTrials_MdnRT   # for first 2 trials, use Median RT from practice block + 500 ms&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = 0.5 + Practice_correctTrials_3qrtRT  # for first 2 trials, use 3rd qrt RT from practice block + 500 ms&amp;#10;    &amp;#10;else:&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = sequenceDataset.trialDuration[experimentalBlock.thisN-1] + sequenceDataset.step[experimentalBlock.thisN-1]   # for all other trials add a value depending on previous trial accuracy&amp;#10;&amp;#10;&amp;#10;# add data about the sequence&amp;#10;thisExp.addData('myExp.trial',   sequenceDataset.trial[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.digit',   sequenceDataset.digit[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.letter',  sequenceDataset.letter[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.pair',    sequenceDataset.pair[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.switch',    sequenceDataset.switch[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.condition', sequenceDataset.condition[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.task',      sequenceDataset.task[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.color',     sequenceDataset.color[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.respCategory', sequenceDataset.respCategory[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.expectedResponse', sequenceDataset.expectedResponse[experimentalBlock.thisN])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# trial duration&amp;#10;if sequenceDataset.trial[experimentalBlock.thisN]&lt;=2:&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = 0.5 + Practice_correctTrials_3qrtRT  # for first 2 trials, use 3rd qrt RT from practice block + 500 ms   &amp;#10;else:&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = sequenceDataset.trialDuration[experimentalBlock.thisN-1] + sequenceDataset.step[experimentalBlock.thisN-1]   # for all other trials add a value depending on previous trial accuracy&amp;#10;&amp;#10;&amp;#10;# add data about the sequence&amp;#10;thisExp.addData('myExp.trial',   sequenceDataset.trial[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.digit',   sequenceDataset.digit[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.letter',  sequenceDataset.letter[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.pair',    sequenceDataset.pair[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.switch',    sequenceDataset.switch[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.condition', sequenceDataset.condition[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.task',      sequenceDataset.task[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.color',     sequenceDataset.color[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.respCategory', sequenceDataset.respCategory[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.expectedResponse', sequenceDataset.expectedResponse[experimentalBlock.thisN])" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# observed response&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.observedResponse[experimentalBlock.thisN] = letterdigitResp_2.keys&amp;#10;thisExp.addData('myExp.observedResponse',   sequenceDataset.observedResponse[experimentalBlock.thisN])&amp;#10;&amp;#10;# trialDuration&amp;#10;thisExp.addData('myExp.trialDuration',      sequenceDataset.trialDuration[experimentalBlock.thisN])&amp;#10;&amp;#10;&amp;#10;# Accuracy&amp;#10;if sequenceDataset.observedResponse[experimentalBlock.thisN]==np.nan:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(0)&amp;#10;else:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(sequenceDataset.observedResponse[experimentalBlock.thisN] == sequenceDataset.expectedResponse[experimentalBlock.thisN]) &amp;#10;thisExp.addData('myExp.Accuracy',         sequenceDataset.Accuracy[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT all trials&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.RT_allTrials[experimentalBlock.thisN]         = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_allTrials',     sequenceDataset.RT_allTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.Accuracy[experimentalBlock.thisN] == 1:&amp;#10;    sequenceDataset.RT_correctTrials[experimentalBlock.thisN] = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_correctTrials',     sequenceDataset.RT_correctTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# adaptation&amp;#10;sequenceDataset.step[experimentalBlock.thisN]    = 0.0  # no step change &amp;#10;thisExp.addData('myExp.step',         sequenceDataset.step[experimentalBlock.thisN])&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="# observed response&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.observedResponse[experimentalBlock.thisN] = letterdigitResp_2.keys&amp;#10;thisExp.addData('myExp.observedResponse',         sequenceDataset.observedResponse[experimentalBlock.thisN])&amp;#10;&amp;#10;# trialDuration&amp;#10;thisExp.addData('myExp.trialDuration',            sequenceDataset.trialDuration[experimentalBlock.thisN])&amp;#10;&amp;#10;# Accuracy&amp;#10;if sequenceDataset.observedResponse[experimentalBlock.thisN]==np.nan:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(0)&amp;#10;else:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(sequenceDataset.observedResponse[experimentalBlock.thisN] == sequenceDataset.expectedResponse[experimentalBlock.thisN]) &amp;#10;thisExp.addData('myExp.Accuracy',                 sequenceDataset.Accuracy[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT all trials&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.RT_allTrials[experimentalBlock.thisN]         = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_allTrials',         sequenceDataset.RT_allTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.Accuracy[experimentalBlock.thisN] == 1:&amp;#10;    sequenceDataset.RT_correctTrials[experimentalBlock.thisN] = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_correctTrials',     sequenceDataset.RT_correctTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# adaptation&amp;#10;sequenceDataset.step[experimentalBlock.thisN]    = 0.0  # no step change &amp;#10;thisExp.addData('myExp.step',                     sequenceDataset.step[experimentalBlock.thisN])&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="addData_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -422,6 +392,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Lucida Sans Typewriter" valType="str" updates="constant" name="font"/>
@@ -440,11 +411,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$sequenceDataset.pair[experimentalBlock.thisN]" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="letterdigitResp_2" plugin="None">
         <Param val="'f','j','None'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$sequenceDataset.expectedResponse[experimentalBlock.thisN]" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -461,7 +434,7 @@
         <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <ProgressComponent name="progressBar_pract1" plugin="None">
+      <ProgressComponent name="progressBar" plugin="None">
         <Param val="top-left" valType="str" updates="constant" name="anchor"/>
         <Param val="None" valType="color" updates="constant" name="borderColor"/>
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -471,7 +444,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="color" updates="constant" name="fillColor"/>
         <Param val="4" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="progressBar_pract1" valType="code" updates="None" name="name"/>
+        <Param val="progressBar" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(-0.9, 0.5)" valType="list" updates="constant" name="pos"/>
@@ -485,188 +458,8 @@
         <Param val="$sequenceDataset.trialDuration[experimentalBlock.thisN]" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="height" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ProgressComponent>
-    </Routine>
-    <Routine name="sequenceGeneration_2">
-      <RoutineSettingsComponent name="sequenceGeneration_2" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="sequenceGeneration_2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="waitScreen_2" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="waitScreen_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Generating stimuli..." valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <CodeComponent name="stimuli_2" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/*&amp;#10;This script generates trial sequences for the n-back task*/&amp;#10;import * as pd from 'pandas';&amp;#10;var expectedResponse, letterPool, sequenceDataset, sequenceOk, sequenceRandom, threeconsletters, threeconsmatches, toggleSwitch, trialAll_num, trialMatch_num_expected, trialMatch_num_observed, trialMatch_observed;&amp;#10;letterPool = ([&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;, &quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;] * 2);&amp;#10;trialAll_num = 5;&amp;#10;trialMatch_num_expected = 1;&amp;#10;toggleSwitch = true;&amp;#10;while ((toggleSwitch === true)) {&amp;#10;    sequenceRandom = np.random.choice(letterPool, trialAll_num, true);&amp;#10;    trialMatch_observed = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)])) {&amp;#10;            trialMatch_observed[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    trialMatch_num_observed = util.sum(trialMatch_observed);&amp;#10;    threeconsletters = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if (((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 1)]) &amp;&amp; (sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)]))) {&amp;#10;            threeconsletters[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    threeconsmatches = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((util.sum(trialMatch_observed.slice((trialIdx - 2), (trialIdx + 1))) === 3)) {&amp;#10;            threeconsmatches[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((((trialMatch_num_observed === trialMatch_num_expected) &amp;&amp; (util.sum(threeconsmatches) === 0)) &amp;&amp; (util.sum(threeconsletters) === 0))) {&amp;#10;        toggleSwitch = false;&amp;#10;    }&amp;#10;}&amp;#10;sequenceOk = sequenceRandom;&amp;#10;expectedResponse = np.array(function () {&amp;#10;    var _pj_a = [], _pj_b = np.arange(trialAll_num);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var _ = _pj_b[_pj_c];&amp;#10;        _pj_a.push(&quot;key2use&quot;);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this));&amp;#10;expectedResponse[(trialMatch_observed === true)] = &quot;left&quot;;&amp;#10;expectedResponse[(trialMatch_observed === false)] = &quot;right&quot;;&amp;#10;sequenceDataset = new pd.DataFrame({&quot;trial&quot;: np.arange(1, (trialAll_num + 1)), &quot;letter&quot;: sequenceOk, &quot;nback_match&quot;: trialMatch_observed, &quot;expectedResponse&quot;: expectedResponse, &quot;observedResponse&quot;: np.nan, &quot;Accuracy&quot;: np.nan, &quot;RT_allTrials&quot;: np.nan, &quot;RT_correctTrials&quot;: np.nan});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="&quot;&quot;&quot;&amp;#10;GENERATE LISTS OF LETTER-DIGIT STIMULI&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;import numpy as np&amp;#10;import pandas as pd&amp;#10;&amp;#10;trialAll_num = 80 # number of trials (must be even)&amp;#10;trialSwitch_proportion = 1/2 # proportion of switch trials&amp;#10;trialSwitch_num_expected = trialAll_num * trialSwitch_proportion # num of switch trials&amp;#10;&amp;#10;# create trial column&amp;#10;trial = 1+np.arange(0,trialAll_num)&amp;#10;&amp;#10;# %% create switch column (list of 1 for &quot;switch&quot; and 0 for &quot;repeat&quot;) &amp;#10;# criteria:&amp;#10;# 1. the first trial is 999 (neither switch or repeat)&amp;#10;# 2. max two consecutive switch or repeat (which also means max 3 consecutive same task in case switch-repeat-repeat)&amp;#10;# 3. same number of Switch and Repeat (with a tolerance of 1 trial as the first one is neither switch or repeat)&amp;#10;&amp;#10;switch = np.empty(trialAll_num,dtype=int)   # initialize&amp;#10;task_digit = np.zeros(trialAll_num,dtype=int) # initialize&amp;#10;&amp;#10;toggleSwitch = 1&amp;#10;while toggleSwitch==1:&amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1:     &amp;#10;            switch[trialIdx] = -999  # Neither Switch or Repeat&amp;#10;            task_digit[trialIdx] = np.random.randint(0,2) # choose task at random&amp;#10;            &amp;#10;        else:&amp;#10;            # fill in the switch variable&amp;#10;            if trial[trialIdx]==2:   &amp;#10;                switch[trialIdx] = np.random.randint(0,2) # Random choice between 0 and 1&amp;#10;            else:&amp;#10;                if switch[trialIdx-1]==switch[trialIdx-2]:  # the previous two trials are the same&amp;#10;                    switch[trialIdx]=np.abs(switch[trialIdx-1]-1)  # opposite of previous trial: either 1 = abs(0-1)   or  0 = abs(1-1)&amp;#10;                else:&amp;#10;                    switch[trialIdx] = np.random.randint(0,2)&amp;#10;            &amp;#10;            # fill in the task_digit variable depending on the switch variable&amp;#10;            if switch[trialIdx]==1:&amp;#10;                task_digit[trialIdx] = np.abs(task_digit[trialIdx-1]-1) # opposite of the previous trial&amp;#10;            else:&amp;#10;                task_digit[trialIdx] = task_digit[trialIdx-1]&amp;#10;        &amp;#10;    # evaluate if number of Switch is half of trial number with a tolerance of 1&amp;#10;    if sum(switch==1)==(trialSwitch_num_expected) or sum(switch==1)==(trialSwitch_num_expected)-1:&amp;#10;        # evaluate if number of task_digit is 50% of trials. This means that digit and letter trials will be equally split in the block&amp;#10;        if sum(task_digit)==(trialSwitch_num_expected):&amp;#10;            toggleSwitch = 0&amp;#10;    &amp;#10;# letter task is the opposite of task_digit&amp;#10;task_letter = np.abs(task_digit-1)&amp;#10;&amp;#10;# create condition, task, color string variables&amp;#10;condition= np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;condition[np.where(switch==0)] = &quot;repeat&quot;&amp;#10;condition[np.where(switch==1)] = &quot;switch&quot;&amp;#10;&amp;#10;task     = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;task[np.where(task_digit)] = &quot;digit&quot;&amp;#10;task[np.where(task_letter)] = &quot;letter&quot;    &amp;#10;&amp;#10;color    = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;color[np.where(task_digit)] = &quot;purple&quot;      &amp;#10;color[np.where(task_letter)] = &quot;green&quot;&amp;#10;&amp;#10;colorHex = np.empty(trialAll_num,dtype=&quot;&lt;U7&quot;) # initialize &amp;#10;colorHex[np.where(task_digit)] = &quot;#FF00FF&quot;  # purple&amp;#10;colorHex[np.where(task_letter)] = &quot;#00FF00&quot;  # green  &amp;#10;&amp;#10;# %% create digit, letter, pair columns&amp;#10;# criteria&amp;#10;# 1. no same digit-letter pair (at least one of them is different) on two consecutive trials that have the same task (and same color)&amp;#10;# 2. when the same task is presented 3 times in a row (i.e., 1 switch followed by 2 repeat trials, yielding 3 consecutive letter trials) no more of 2 consecutive trials with the same response category (e.g., vowel)&amp;#10;# 3. each response category in same proportion&amp;#10;# 4. each digit (same for letter) is used at least 5% of the times &amp;#10;&amp;#10;&amp;#10;# pool of digit letter stimuli&amp;#10;letter_vowel_pool     = [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;]&amp;#10;letter_consonant_pool = [&quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;]&amp;#10;letter_pool = letter_vowel_pool + letter_consonant_pool&amp;#10;digit_even_pool = [2, 4, 6, 8]&amp;#10;digit_odd_pool =  [3, 5, 7, 9]&amp;#10;digit_pool = digit_even_pool + digit_odd_pool&amp;#10;&amp;#10;# initialize digit, letter, and pair columns&amp;#10;digit  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;letter = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;pair   = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;respCategory = np.empty(trialAll_num,dtype=&quot;&lt;U9&quot;) &amp;#10;&amp;#10;# initialize vowel, consonant, even, odd // as example, vowel will show 1 if the letter is vowel and 0 otherwise. These vars will be useful to count how many consecutive times we expect a certain response (e.g., vowel)&amp;#10;vowel      = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;consonant  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;even       = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;odd        = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;&amp;#10;toggleSwitch2 = 1&amp;#10;while toggleSwitch2==1:&amp;#10;    &amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1: # 1st trial&amp;#10;            # pick any digit and letter&amp;#10;            digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;            letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                &amp;#10;        elif trial[trialIdx]==2: # 2nd trial&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                if reduceChoice==1:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                elif reduceChoice==2:&amp;#10;                    digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                elif reduceChoice==3:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;         &amp;#10;        elif trial[trialIdx]&gt;=3: # 3rd trial and onwards&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                if respCategory[trialIdx-1]!=respCategory[trialIdx-2]:  # if response Category was not the same in the previous two trials --&gt; there is NO risk of having three times in a row the same response Category (e.g., vowel)&amp;#10;                    # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                    reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                    if reduceChoice==1:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif reduceChoice==2:&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                    elif reduceChoice==3:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;             &amp;#10;                else:    # if response Category was the same in the previous two trials --&gt; there is risk of having three times in a row the same response Category (e.g., vowel), so we need to exclude the stimuli compatible with this response category (e.g., all vowels)&amp;#10;                    # &quot;criteria 1 and 2&quot;                     &amp;#10;                    if respCategory[trialIdx-1]==&quot;vowel&quot;: &amp;#10;                        # pick any digit, but draw the letter from the consonant pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_consonant_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;consonant&quot;: &amp;#10;                        # pick any digit, but draw the letter from the vowel pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_vowel_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;even&quot;: &amp;#10;                        # pick any letter, but draw the digit from the odd pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_odd_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;odd&quot;: &amp;#10;                        # pick any letter, but draw the digit from the even pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_even_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;        # create pair of letter + digit&amp;#10;        pair[trialIdx] = letter[trialIdx] + str(digit[trialIdx]) &amp;#10;        &amp;#10;        # now that digit and letter have been chosen, update responseCategory. This will be useful for trialIdx+1&amp;#10;        if np.isin(letter[trialIdx],letter_vowel_pool):  vowel[trialIdx] = 1&amp;#10;        else:                                            vowel[trialIdx] = 0&amp;#10;        if np.isin(letter[trialIdx],letter_consonant_pool): consonant[trialIdx] = 1&amp;#10;        else:                                               consonant[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_even_pool):  even[trialIdx] = 1&amp;#10;        else:                                         even[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_odd_pool): odd[trialIdx] = 1&amp;#10;        else:                                       odd[trialIdx] = 0&amp;#10;        if task[trialIdx]==&quot;letter&quot;:&amp;#10;            if vowel[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;vowel&quot;&amp;#10;            elif consonant[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;consonant&quot;&amp;#10;        elif task[trialIdx]==&quot;digit&quot;:&amp;#10;            if even[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;even&quot;&amp;#10;            elif odd[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;odd&quot;&amp;#10;        &amp;#10;    # criterion &quot;3&quot;&amp;#10;    # multiply task_letter (1=letter task, 0=otherwise) with vowel(1=vowel, 0=otherwise). Their product will identify letter trials with vowel (i.e., it will ignore digit trials where the letter is a vowel). Same concept for the other 3 cases&amp;#10;    task_letter_vowel     = task_letter * vowel&amp;#10;    task_letter_consonant = task_letter * consonant&amp;#10;    task_digit_even       = task_digit * even&amp;#10;    task_digit_odd        = task_digit * odd&amp;#10;    # proportion of expected response, to make sure they are the same (0.25)&amp;#10;    proportionCheck  = np.zeros(4,dtype=&quot;float&quot;) # initialize&amp;#10;    proportionCheck[0] = sum(task_letter_vowel) / trialAll_num&amp;#10;    proportionCheck[1] = sum(task_letter_consonant) / trialAll_num&amp;#10;    proportionCheck[2] = sum(task_digit_even) / trialAll_num&amp;#10;    proportionCheck[3] = sum(task_digit_odd) / trialAll_num&amp;#10;    &amp;#10;    # &quot;criterion 4&quot;&amp;#10;    # check that each digit (same for letter) is picked at least 5% of the times &amp;#10;    digitProportion  = np.empty(len(digit_pool),dtype=float)     &amp;#10;    letterProportion = np.empty(len(letter_pool),dtype=float)     &amp;#10;    for poolIdx in np.arange(0,len(digit_pool)):&amp;#10;        digitProportion[poolIdx]  = sum(digit==digit_pool[poolIdx])/trialAll_num&amp;#10;        letterProportion[poolIdx] = sum(letter==letter_pool[poolIdx])/trialAll_num&amp;#10;    &amp;#10;    # implements the two checks above (keep asking for a new sequence if either of the two checks fails)&amp;#10;    if sum(proportionCheck==0.25)==4 and np.min(digitProportion)&gt;=0.05 and np.min(letterProportion)&gt;=0.05:&amp;#10;        toggleSwitch2 = 0    &amp;#10;     &amp;#10;&amp;#10;# %% create expectedResponse&amp;#10;# &quot;f&quot; = consonant &amp; odd&amp;#10;# &quot;j&quot; = vowel &amp; even&amp;#10;&amp;#10;expectedResponse = np.array(['key2press' for _ in np.arange(trialAll_num)])&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;even&quot;,respCategory==&quot;vowel&quot;)]     = &quot;j&quot;&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;odd&quot;, respCategory==&quot;consonant&quot;)] = &quot;f&quot;&amp;#10;&amp;#10;# %% create dataset&amp;#10;# build a dataframe from dictionary&amp;#10;&amp;#10;sequenceDataset= pd.DataFrame({'trial': trial,&amp;#10;                               'digit': digit,&amp;#10;                               'even': even,&amp;#10;                               'odd': odd,&amp;#10;                               'letter': letter,&amp;#10;                               'vowel': vowel,&amp;#10;                               'consonant': consonant,&amp;#10;                               'pair': pair,&amp;#10;                               'switch': switch, &amp;#10;                               'condition': condition,&amp;#10;                               'task': task,&amp;#10;                               'task_digit': task_digit,                               &amp;#10;                               'task_letter': task_letter,&amp;#10;                               'task_letter_vowel': task_letter_vowel,&amp;#10;                               'task_letter_consonant': task_letter_consonant,&amp;#10;                               'task_digit_even': task_digit_even,&amp;#10;                               'task_digit_odd': task_digit_odd,&amp;#10;                               'color': color,&amp;#10;                               'colorHex': colorHex,&amp;#10;                               'respCategory': respCategory,&amp;#10;                               'expectedResponse': expectedResponse,&amp;#10;                               'observedResponse': np.nan,&amp;#10;                               'Accuracy': np.nan,&amp;#10;                               'RT_allTrials': np.nan,&amp;#10;                               'RT_correctTrials': np.nan,&amp;#10;                               'trialDuration': np.nan,&amp;#10;                               'step': np.nan})&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="stimuli_2" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-    </Routine>
-    <Routine name="startpractice">
-      <RoutineSettingsComponent name="startpractice" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="startpractice" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="text" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="text" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Press bar to start the practice" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <KeyboardComponent name="key_resp" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="key_resp" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
-    </Routine>
-    <Routine name="starttask">
-      <RoutineSettingsComponent name="starttask" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="starttask" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="text_2" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="text_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Press bar to start &amp;#10;the experimental task" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <KeyboardComponent name="key_resp_2" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="key_resp_2" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
     </Routine>
     <Routine name="blank">
       <RoutineSettingsComponent name="blank" plugin="None">
@@ -677,6 +470,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="blank" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -706,6 +500,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="blankPeriod" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="code" updates="None" name="saveData"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -714,7 +509,7 @@
         <Param val="$blankDuration" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
       </StaticComponent>
-      <ProgressComponent name="progressBar_pract2" plugin="None">
+      <ProgressComponent name="progressBar_2" plugin="None">
         <Param val="top-left" valType="str" updates="constant" name="anchor"/>
         <Param val="None" valType="color" updates="constant" name="borderColor"/>
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -724,7 +519,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="color" updates="constant" name="fillColor"/>
         <Param val="4" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="progressBar_pract2" valType="code" updates="None" name="name"/>
+        <Param val="progressBar_2" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(-0.9, 0.5)" valType="list" updates="constant" name="pos"/>
@@ -738,26 +533,33 @@
         <Param val="$blankDuration" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="height" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ProgressComponent>
-      <SoundComponent name="sound_2" plugin="None">
+      <SoundComponent name="fbSound_2" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
-        <Param val="sound_2" valType="code" updates="None" name="name"/>
+        <Param val="1" valType="code" updates="None" name="latencyClass"/>
+        <Param val="fbSound_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="str" updates="None" name="resample"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="600" valType="str" updates="constant" name="sound"/>
+        <Param val="600" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="str" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.050" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="sound_volume" valType="num" updates="set every repeat" name="volume"/>
       </SoundComponent>
     </Routine>
-    <Routine name="Instruction">
-      <RoutineSettingsComponent name="Instruction" plugin="None">
+    <Routine name="practiceSequenceGeneration">
+      <RoutineSettingsComponent name="practiceSequenceGeneration" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -765,7 +567,70 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="Instruction" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="practiceSequenceGeneration" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="waitScreen" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="waitScreen" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Generating stimuli..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="stimuliCode" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="/*&amp;#10;This script generates trial sequences for the n-back task*/&amp;#10;import * as pd from 'pandas';&amp;#10;var expectedResponse, letterPool, sequenceDataset, sequenceOk, sequenceRandom, threeconsletters, threeconsmatches, toggleSwitch, trialAll_num, trialMatch_num_expected, trialMatch_num_observed, trialMatch_observed;&amp;#10;letterPool = ([&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;, &quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;] * 2);&amp;#10;trialAll_num = 5;&amp;#10;trialMatch_num_expected = 1;&amp;#10;toggleSwitch = true;&amp;#10;while ((toggleSwitch === true)) {&amp;#10;    sequenceRandom = np.random.choice(letterPool, trialAll_num, true);&amp;#10;    trialMatch_observed = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)])) {&amp;#10;            trialMatch_observed[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    trialMatch_num_observed = util.sum(trialMatch_observed);&amp;#10;    threeconsletters = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if (((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 1)]) &amp;&amp; (sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)]))) {&amp;#10;            threeconsletters[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    threeconsmatches = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((util.sum(trialMatch_observed.slice((trialIdx - 2), (trialIdx + 1))) === 3)) {&amp;#10;            threeconsmatches[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((((trialMatch_num_observed === trialMatch_num_expected) &amp;&amp; (util.sum(threeconsmatches) === 0)) &amp;&amp; (util.sum(threeconsletters) === 0))) {&amp;#10;        toggleSwitch = false;&amp;#10;    }&amp;#10;}&amp;#10;sequenceOk = sequenceRandom;&amp;#10;expectedResponse = np.array(function () {&amp;#10;    var _pj_a = [], _pj_b = np.arange(trialAll_num);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var _ = _pj_b[_pj_c];&amp;#10;        _pj_a.push(&quot;key2use&quot;);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this));&amp;#10;expectedResponse[(trialMatch_observed === true)] = &quot;left&quot;;&amp;#10;expectedResponse[(trialMatch_observed === false)] = &quot;right&quot;;&amp;#10;sequenceDataset = new pd.DataFrame({&quot;trial&quot;: np.arange(1, (trialAll_num + 1)), &quot;letter&quot;: sequenceOk, &quot;nback_match&quot;: trialMatch_observed, &quot;expectedResponse&quot;: expectedResponse, &quot;observedResponse&quot;: np.nan, &quot;Accuracy&quot;: np.nan, &quot;RT_allTrials&quot;: np.nan, &quot;RT_correctTrials&quot;: np.nan});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="&quot;&quot;&quot;&amp;#10;GENERATE LISTS OF LETTER-DIGIT STIMULI&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;import numpy as np&amp;#10;import pandas as pd&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;===================================&amp;#10;a. Trial Numbers and Distributions&amp;#10;===================================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;trialAll_num = 20 # number of trials (must be even)&amp;#10;trialSwitch_proportion = 1/2 # proportion of switch trials&amp;#10;trialSwitch_num_expected = trialAll_num * trialSwitch_proportion # num of switch trials&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;=============================&amp;#10;b. Trial Sequence Generation&amp;#10;=============================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# create trial column&amp;#10;trial = 1+np.arange(0,trialAll_num)&amp;#10;&amp;#10;# %% create switch column (list of 1 for &quot;switch&quot; and 0 for &quot;repeat&quot;) &amp;#10;# criteria:&amp;#10;# 1. the first trial is 999 (neither switch or repeat)&amp;#10;# 2. max two consecutive switch or repeat (which also means max 3 consecutive same task in case switch-repeat-repeat)&amp;#10;# 3. same number of Switch and Repeat (with a tolerance of 1 trial as the first one is neither switch or repeat)&amp;#10;&amp;#10;switch = np.empty(trialAll_num,dtype=int)   # initialize&amp;#10;task_digit = np.zeros(trialAll_num,dtype=int) # initialize&amp;#10;&amp;#10;toggleSwitch = 1&amp;#10;while toggleSwitch==1:&amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1:       # 1st trial&amp;#10;            switch[trialIdx] = -999  # neither switch or repeat&amp;#10;            task_digit[trialIdx] = np.random.randint(0,2)          # choose task at random&amp;#10;            &amp;#10;        else:&amp;#10;            # fill in the switch variable&amp;#10;            if trial[trialIdx]==2:   # 2nd trial&amp;#10;                switch[trialIdx] = np.random.randint(0,2)          # random choice between 0 and 1&amp;#10;            else:                    # 3rd trial onwards&amp;#10;                if switch[trialIdx-1]==switch[trialIdx-2]:         # if the previous two trials are the same&amp;#10;                    switch[trialIdx]=np.abs(switch[trialIdx-1]-1)  # pick the opposite trial &amp;#10;                else:                                              # if not the same with previous two trial&amp;#10;                    switch[trialIdx] = np.random.randint(0,2)      # choose at random&amp;#10;            &amp;#10;            # fill in the task_digit variable depending on the switch variable&amp;#10;            if switch[trialIdx]==1:     # if switch trial&amp;#10;                task_digit[trialIdx] = np.abs(task_digit[trialIdx-1]-1) # pick the opposite task&amp;#10;            else:                       # if repeat trial&amp;#10;                task_digit[trialIdx] = task_digit[trialIdx-1]           # pick the same task&amp;#10;        &amp;#10;    # evaluate if number of switch is half of trial number with a tolerance of 1&amp;#10;    if sum(switch==1)==(trialSwitch_num_expected) or sum(switch==1)==(trialSwitch_num_expected)-1:&amp;#10;        # evaluate if number of task_digit is 50% of trials. This means that digit and letter trials will be equally split in the block&amp;#10;        if sum(task_digit)==(trialSwitch_num_expected):&amp;#10;            toggleSwitch = 0&amp;#10;    &amp;#10;# letter task is the opposite of task_digit&amp;#10;task_letter = np.abs(task_digit-1)&amp;#10;&amp;#10;# create condition, task, color string variables&amp;#10;condition= np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;condition[np.where(switch==0)] = &quot;repeat&quot;&amp;#10;condition[np.where(switch==1)] = &quot;switch&quot;&amp;#10;&amp;#10;task     = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;task[np.where(task_digit)] = &quot;digit&quot;&amp;#10;task[np.where(task_letter)] = &quot;letter&quot;    &amp;#10;&amp;#10;color    = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;color[np.where(task_digit)] = &quot;purple&quot;      &amp;#10;color[np.where(task_letter)] = &quot;green&quot;&amp;#10;&amp;#10;colorHex = np.empty(trialAll_num,dtype=&quot;&lt;U7&quot;) # initialize &amp;#10;colorHex[np.where(task_digit)] = &quot;#FF00FF&quot;  # purple&amp;#10;colorHex[np.where(task_letter)] = &quot;#00FF00&quot;  # green  &amp;#10;&amp;#10;# %% create digit, letter, pair columns&amp;#10;# criteria&amp;#10;# 1. no same digit-letter pair (at least one of them is different) on two consecutive trials that have the same task (and same color)&amp;#10;# 2. when the same task is presented 3 times in a row (i.e., 1 switch followed by 2 repeat trials, yielding 3 consecutive letter trials) no more of 2 consecutive trials with the same response category (e.g., vowel)&amp;#10;# 3. each response category in same proportion&amp;#10;# 4. each digit (same for letter) is used at least 5% of the times &amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;b.1 Assign Stimuli Pool&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# pool of digit letter stimuli&amp;#10;letter_vowel_pool     = [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;]&amp;#10;letter_consonant_pool = [&quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;]&amp;#10;letter_pool = letter_vowel_pool + letter_consonant_pool&amp;#10;digit_even_pool = [2, 4, 6, 8]&amp;#10;digit_odd_pool =  [3, 5, 7, 9]&amp;#10;digit_pool = digit_even_pool + digit_odd_pool&amp;#10;&amp;#10;# initialize digit, letter, and pair columns&amp;#10;digit  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;letter = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;pair   = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;respCategory = np.empty(trialAll_num,dtype=&quot;&lt;U9&quot;) &amp;#10;&amp;#10;# initialize vowel, consonant, even, odd // as example, vowel will show 1 if the letter is vowel and 0 otherwise. These vars will be useful to count how many consecutive times we expect a certain response (e.g., vowel)&amp;#10;vowel      = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;consonant  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;even       = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;odd        = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;&amp;#10;toggleSwitch2 = 1&amp;#10;while toggleSwitch2==1:&amp;#10;    &amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1: # 1st trial&amp;#10;            # pick any digit and letter&amp;#10;            digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;            letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                &amp;#10;        elif trial[trialIdx]==2: # 2nd trial&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                if reduceChoice==1:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                elif reduceChoice==2:&amp;#10;                    digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                elif reduceChoice==3:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;         &amp;#10;        elif trial[trialIdx]&gt;=3: # 3rd trial and onwards&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                if respCategory[trialIdx-1]!=respCategory[trialIdx-2]:  # if response Category was not the same in the previous two trials --&gt; there is NO risk of having three times in a row the same response Category (e.g., vowel)&amp;#10;                    # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                    reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                    if reduceChoice==1:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif reduceChoice==2:&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                    elif reduceChoice==3:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;             &amp;#10;                else:    # if response Category was the same in the previous two trials --&gt; there is risk of having three times in a row the same response Category (e.g., vowel), so we need to exclude the stimuli compatible with this response category (e.g., all vowels)&amp;#10;                    # &quot;criteria 1 and 2&quot;                     &amp;#10;                    if respCategory[trialIdx-1]==&quot;vowel&quot;: &amp;#10;                        # pick any digit, but draw the letter from the consonant pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_consonant_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;consonant&quot;: &amp;#10;                        # pick any digit, but draw the letter from the vowel pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_vowel_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;even&quot;: &amp;#10;                        # pick any letter, but draw the digit from the odd pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_odd_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;odd&quot;: &amp;#10;                        # pick any letter, but draw the digit from the even pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_even_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;        # create pair of letter + digit&amp;#10;        pair[trialIdx] = letter[trialIdx] + str(digit[trialIdx]) &amp;#10;        &amp;#10;        # now that digit and letter have been chosen, update responseCategory. &amp;#10;        if np.isin(letter[trialIdx],letter_vowel_pool):  vowel[trialIdx] = 1&amp;#10;        else:                                            vowel[trialIdx] = 0&amp;#10;        if np.isin(letter[trialIdx],letter_consonant_pool): consonant[trialIdx] = 1&amp;#10;        else:                                               consonant[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_even_pool):  even[trialIdx] = 1&amp;#10;        else:                                         even[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_odd_pool): odd[trialIdx] = 1&amp;#10;        else:                                       odd[trialIdx] = 0&amp;#10;        if task[trialIdx]==&quot;letter&quot;:&amp;#10;            if vowel[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;vowel&quot;&amp;#10;            elif consonant[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;consonant&quot;&amp;#10;        elif task[trialIdx]==&quot;digit&quot;:&amp;#10;            if even[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;even&quot;&amp;#10;            elif odd[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;odd&quot;&amp;#10;        &amp;#10;    # criterion &quot;3&quot;&amp;#10;    # multiply task_letter (1=letter task, 0=otherwise) with vowel(1=vowel, 0=otherwise). Their product will identify letter trials with vowel (i.e., it will ignore digit trials where the letter is a vowel). Same concept for the other 3 cases&amp;#10;    task_letter_vowel     = task_letter * vowel&amp;#10;    task_letter_consonant = task_letter * consonant&amp;#10;    task_digit_even       = task_digit * even&amp;#10;    task_digit_odd        = task_digit * odd&amp;#10;    # proportion of expected response, to make sure they are the same (0.25)&amp;#10;    proportionCheck  = np.zeros(4,dtype=&quot;float&quot;) # initialize&amp;#10;    proportionCheck[0] = sum(task_letter_vowel) / trialAll_num&amp;#10;    proportionCheck[1] = sum(task_letter_consonant) / trialAll_num&amp;#10;    proportionCheck[2] = sum(task_digit_even) / trialAll_num&amp;#10;    proportionCheck[3] = sum(task_digit_odd) / trialAll_num&amp;#10;    &amp;#10;    # &quot;criterion 4&quot;&amp;#10;    # check that each digit (same for letter) is picked at least 5% of the times &amp;#10;    digitProportion  = np.empty(len(digit_pool),dtype=float)     &amp;#10;    letterProportion = np.empty(len(letter_pool),dtype=float)     &amp;#10;    for poolIdx in np.arange(0,len(digit_pool)):&amp;#10;        digitProportion[poolIdx]  = sum(digit==digit_pool[poolIdx])/trialAll_num&amp;#10;        letterProportion[poolIdx] = sum(letter==letter_pool[poolIdx])/trialAll_num&amp;#10;    &amp;#10;    # implements the two checks above (keep asking for a new sequence if either of the two checks fails)&amp;#10;    if sum(proportionCheck==0.25)==4 and np.min(digitProportion)&gt;=0.05 and np.min(letterProportion)&gt;=0.05:&amp;#10;        toggleSwitch2 = 0    &amp;#10;     &amp;#10;&quot;&quot;&quot;&amp;#10;========================&amp;#10;c. Assign Response Keys&amp;#10;========================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# %% create expectedResponse&amp;#10;# &quot;f&quot; = consonant &amp; odd&amp;#10;# &quot;j&quot; = vowel &amp; even&amp;#10;&amp;#10;expectedResponse = np.array(['key2press' for _ in np.arange(trialAll_num)])&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;even&quot;,respCategory==&quot;vowel&quot;)]     = &quot;j&quot;&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;odd&quot;, respCategory==&quot;consonant&quot;)] = &quot;f&quot;&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;========================&amp;#10;d. Initialise DataFrame&amp;#10;========================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# build a dataframe from dictionary&amp;#10;sequenceDataset= pd.DataFrame({'trial': trial,&amp;#10;                               'digit': digit,&amp;#10;                               'even': even,&amp;#10;                               'odd': odd,&amp;#10;                               'letter': letter,&amp;#10;                               'vowel': vowel,&amp;#10;                               'consonant': consonant,&amp;#10;                               'pair': pair,&amp;#10;                               'switch': switch, &amp;#10;                               'condition': condition,&amp;#10;                               'task': task,&amp;#10;                               'task_digit': task_digit,                               &amp;#10;                               'task_letter': task_letter,&amp;#10;                               'task_letter_vowel': task_letter_vowel,&amp;#10;                               'task_letter_consonant': task_letter_consonant,&amp;#10;                               'task_digit_even': task_digit_even,&amp;#10;                               'task_digit_odd': task_digit_odd,&amp;#10;                               'color': color,&amp;#10;                               'colorHex': colorHex,&amp;#10;                               'respCategory': respCategory,&amp;#10;                               'expectedResponse': expectedResponse,&amp;#10;                               'observedResponse': np.nan,&amp;#10;                               'Accuracy': np.nan,&amp;#10;                               'RT_allTrials': np.nan,&amp;#10;                               'RT_correctTrials': np.nan,&amp;#10;                               'trialDuration': np.nan,&amp;#10;                               'step': np.nan})&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="stimuliCode" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="instructions">
+      <RoutineSettingsComponent name="instructions" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="instructions" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
@@ -778,10 +643,11 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Slide1.jpg" valType="file" updates="constant" name="image"/>
+        <Param val="instLD_1.jpg" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="instImage" valType="code" updates="None" name="name"/>
@@ -789,7 +655,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0.1)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="list" updates="constant" name="size"/>
+        <Param val="(1.5,1.5)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -798,12 +664,14 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <TextComponent name="instText" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -822,16 +690,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press bar to continue" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="insNext" plugin="None">
+      <KeyboardComponent name="moveOn" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="insNext" valType="code" updates="None" name="name"/>
+        <Param val="moveOn" valType="code" updates="None" name="name"/>
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -844,8 +714,8 @@
         <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="Instruction2">
-      <RoutineSettingsComponent name="Instruction2" plugin="None">
+    <Routine name="instructions2">
+      <RoutineSettingsComponent name="instructions2" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -853,31 +723,33 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="Instruction2" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="instructions2" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <ImageComponent name="instImage2" plugin="None">
+      <ImageComponent name="instImage_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Slide2.jpg" valType="file" updates="constant" name="image"/>
+        <Param val="instLD_2.jpg" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="instImage2" valType="code" updates="None" name="name"/>
+        <Param val="instImage_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0.1)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="list" updates="constant" name="size"/>
+        <Param val="(1.5,1.5)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -886,18 +758,20 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="instText_3" plugin="None">
+      <TextComponent name="instText_2" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="instText_3" valType="code" updates="None" name="name"/>
+        <Param val="instText_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, -0.8)" valType="list" updates="constant" name="pos"/>
@@ -910,16 +784,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press bar to continue" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="insNext_2" plugin="None">
+      <KeyboardComponent name="moveOn_2" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="insNext_2" valType="code" updates="None" name="name"/>
+        <Param val="moveOn_2" valType="code" updates="None" name="name"/>
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -932,8 +808,8 @@
         <Param val="False" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="End">
-      <RoutineSettingsComponent name="End" plugin="None">
+    <Routine name="startPractice">
+      <RoutineSettingsComponent name="startPractice" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -941,26 +817,220 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="End" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="startPractice" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <ImageComponent name="image" plugin="None">
+      <TextComponent name="startPract_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="startPract_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Press bar to start the practice" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="moveOn_3" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="moveOn_3" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="startTask">
+      <RoutineSettingsComponent name="startTask" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="startTask" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="startTask_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="startTask_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Press bar to start &amp;#10;the experimental task" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="moveOn_5" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="moveOn_5" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="taskSequenceGeneration">
+      <RoutineSettingsComponent name="taskSequenceGeneration" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="taskSequenceGeneration" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="waitScreen_2" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="waitScreen_2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Generating stimuli..." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="stimuliCode_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="/*&amp;#10;This script generates trial sequences for the n-back task*/&amp;#10;import * as pd from 'pandas';&amp;#10;var expectedResponse, letterPool, sequenceDataset, sequenceOk, sequenceRandom, threeconsletters, threeconsmatches, toggleSwitch, trialAll_num, trialMatch_num_expected, trialMatch_num_observed, trialMatch_observed;&amp;#10;letterPool = ([&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;, &quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;] * 2);&amp;#10;trialAll_num = 5;&amp;#10;trialMatch_num_expected = 1;&amp;#10;toggleSwitch = true;&amp;#10;while ((toggleSwitch === true)) {&amp;#10;    sequenceRandom = np.random.choice(letterPool, trialAll_num, true);&amp;#10;    trialMatch_observed = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)])) {&amp;#10;            trialMatch_observed[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    trialMatch_num_observed = util.sum(trialMatch_observed);&amp;#10;    threeconsletters = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if (((sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 1)]) &amp;&amp; (sequenceRandom[trialIdx] === sequenceRandom[(trialIdx - 2)]))) {&amp;#10;            threeconsletters[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    threeconsmatches = np.zeros(trialAll_num, {&quot;dtype&quot;: bool});&amp;#10;    for (var trialIdx, _pj_c = 0, _pj_a = np.arange(2, trialAll_num), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        trialIdx = _pj_a[_pj_c];&amp;#10;        if ((util.sum(trialMatch_observed.slice((trialIdx - 2), (trialIdx + 1))) === 3)) {&amp;#10;            threeconsmatches[trialIdx] = true;&amp;#10;        }&amp;#10;    }&amp;#10;    if ((((trialMatch_num_observed === trialMatch_num_expected) &amp;&amp; (util.sum(threeconsmatches) === 0)) &amp;&amp; (util.sum(threeconsletters) === 0))) {&amp;#10;        toggleSwitch = false;&amp;#10;    }&amp;#10;}&amp;#10;sequenceOk = sequenceRandom;&amp;#10;expectedResponse = np.array(function () {&amp;#10;    var _pj_a = [], _pj_b = np.arange(trialAll_num);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var _ = _pj_b[_pj_c];&amp;#10;        _pj_a.push(&quot;key2use&quot;);&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this));&amp;#10;expectedResponse[(trialMatch_observed === true)] = &quot;left&quot;;&amp;#10;expectedResponse[(trialMatch_observed === false)] = &quot;right&quot;;&amp;#10;sequenceDataset = new pd.DataFrame({&quot;trial&quot;: np.arange(1, (trialAll_num + 1)), &quot;letter&quot;: sequenceOk, &quot;nback_match&quot;: trialMatch_observed, &quot;expectedResponse&quot;: expectedResponse, &quot;observedResponse&quot;: np.nan, &quot;Accuracy&quot;: np.nan, &quot;RT_allTrials&quot;: np.nan, &quot;RT_correctTrials&quot;: np.nan});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="&quot;&quot;&quot;&amp;#10;GENERATE LISTS OF LETTER-DIGIT STIMULI&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;import numpy as np&amp;#10;import pandas as pd&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;===================================&amp;#10;a. Trial Numbers and Distributions&amp;#10;===================================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;trialAll_num = 216 # number of trials (must be even)&amp;#10;trialSwitch_proportion = 1/2 # proportion of switch trials&amp;#10;trialSwitch_num_expected = trialAll_num * trialSwitch_proportion # num of switch trials&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;=============================&amp;#10;b. Trial Sequence Generation&amp;#10;=============================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# create trial column&amp;#10;trial = 1+np.arange(0,trialAll_num)&amp;#10;&amp;#10;# %% create switch column (list of 1 for &quot;switch&quot; and 0 for &quot;repeat&quot;) &amp;#10;# criteria:&amp;#10;# 1. the first trial is 999 (neither switch or repeat)&amp;#10;# 2. max two consecutive switch or repeat (which also means max 3 consecutive same task in case switch-repeat-repeat)&amp;#10;# 3. same number of Switch and Repeat (with a tolerance of 1 trial as the first one is neither switch or repeat)&amp;#10;&amp;#10;switch = np.empty(trialAll_num,dtype=int)   # initialize&amp;#10;task_digit = np.zeros(trialAll_num,dtype=int) # initialize&amp;#10;&amp;#10;toggleSwitch = 1&amp;#10;while toggleSwitch==1:&amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1:       # 1st trial&amp;#10;            switch[trialIdx] = -999  # neither switch or repeat&amp;#10;            task_digit[trialIdx] = np.random.randint(0,2)          # choose task at random&amp;#10;            &amp;#10;        else:&amp;#10;            # fill in the switch variable&amp;#10;            if trial[trialIdx]==2:   # 2nd trial&amp;#10;                switch[trialIdx] = np.random.randint(0,2)          # random choice between 0 and 1&amp;#10;            else:                    # 3rd trial onwards&amp;#10;                if switch[trialIdx-1]==switch[trialIdx-2]:         # if the previous two trials are the same&amp;#10;                    switch[trialIdx]=np.abs(switch[trialIdx-1]-1)  # pick the opposite trial &amp;#10;                else:                                              # if not the same with previous two trial&amp;#10;                    switch[trialIdx] = np.random.randint(0,2)      # choose at random&amp;#10;            &amp;#10;            # fill in the task_digit variable depending on the switch variable&amp;#10;            if switch[trialIdx]==1:     # if switch trial&amp;#10;                task_digit[trialIdx] = np.abs(task_digit[trialIdx-1]-1) # pick the opposite task&amp;#10;            else:                       # if repeat trial&amp;#10;                task_digit[trialIdx] = task_digit[trialIdx-1]           # pick the same task&amp;#10;        &amp;#10;    # evaluate if number of switch is half of trial number with a tolerance of 1&amp;#10;    if sum(switch==1)==(trialSwitch_num_expected) or sum(switch==1)==(trialSwitch_num_expected)-1:&amp;#10;        # evaluate if number of task_digit is 50% of trials. This means that digit and letter trials will be equally split in the block&amp;#10;        if sum(task_digit)==(trialSwitch_num_expected):&amp;#10;            toggleSwitch = 0&amp;#10;    &amp;#10;# letter task is the opposite of task_digit&amp;#10;task_letter = np.abs(task_digit-1)&amp;#10;&amp;#10;# create condition, task, color string variables&amp;#10;condition= np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;condition[np.where(switch==0)] = &quot;repeat&quot;&amp;#10;condition[np.where(switch==1)] = &quot;switch&quot;&amp;#10;&amp;#10;task     = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;task[np.where(task_digit)] = &quot;digit&quot;&amp;#10;task[np.where(task_letter)] = &quot;letter&quot;    &amp;#10;&amp;#10;color    = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;) # initialize &amp;#10;color[np.where(task_digit)] = &quot;purple&quot;      &amp;#10;color[np.where(task_letter)] = &quot;green&quot;&amp;#10;&amp;#10;colorHex = np.empty(trialAll_num,dtype=&quot;&lt;U7&quot;) # initialize &amp;#10;colorHex[np.where(task_digit)] = &quot;#FF00FF&quot;  # purple&amp;#10;colorHex[np.where(task_letter)] = &quot;#00FF00&quot;  # green  &amp;#10;&amp;#10;# %% create digit, letter, pair columns&amp;#10;# criteria&amp;#10;# 1. no same digit-letter pair (at least one of them is different) on two consecutive trials that have the same task (and same color)&amp;#10;# 2. when the same task is presented 3 times in a row (i.e., 1 switch followed by 2 repeat trials, yielding 3 consecutive letter trials) no more of 2 consecutive trials with the same response category (e.g., vowel)&amp;#10;# 3. each response category in same proportion&amp;#10;# 4. each digit (same for letter) is used at least 5% of the times &amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;b.1 Assign Stimuli Pool&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# pool of digit letter stimuli&amp;#10;letter_vowel_pool     = [&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;U&quot;]&amp;#10;letter_consonant_pool = [&quot;H&quot;, &quot;K&quot;, &quot;M&quot;, &quot;R&quot;]&amp;#10;letter_pool = letter_vowel_pool + letter_consonant_pool&amp;#10;digit_even_pool = [2, 4, 6, 8]&amp;#10;digit_odd_pool =  [3, 5, 7, 9]&amp;#10;digit_pool = digit_even_pool + digit_odd_pool&amp;#10;&amp;#10;# initialize digit, letter, and pair columns&amp;#10;digit  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;letter = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;pair   = np.empty(trialAll_num,dtype=&quot;&lt;U6&quot;)&amp;#10;respCategory = np.empty(trialAll_num,dtype=&quot;&lt;U9&quot;) &amp;#10;&amp;#10;# initialize vowel, consonant, even, odd // as example, vowel will show 1 if the letter is vowel and 0 otherwise. These vars will be useful to count how many consecutive times we expect a certain response (e.g., vowel)&amp;#10;vowel      = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;consonant  = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;even       = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;odd        = np.zeros(trialAll_num,dtype=&quot;int&quot;)&amp;#10;&amp;#10;toggleSwitch2 = 1&amp;#10;while toggleSwitch2==1:&amp;#10;    &amp;#10;    for trialIdx in np.arange(0,trialAll_num):&amp;#10;        if trial[trialIdx]==1: # 1st trial&amp;#10;            # pick any digit and letter&amp;#10;            digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;            letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                &amp;#10;        elif trial[trialIdx]==2: # 2nd trial&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                if reduceChoice==1:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                elif reduceChoice==2:&amp;#10;                    digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                elif reduceChoice==3:&amp;#10;                    digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                    digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                    letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                    letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;         &amp;#10;        elif trial[trialIdx]&gt;=3: # 3rd trial and onwards&amp;#10;            if task[trialIdx]!=task[trialIdx-1]: # if current task is different task from previous task: nothing to worry about. the pair can be even the same as the previous one because the task (and the color) changes&amp;#10;                # pick any digit and letter    &amp;#10;                digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;            else: # if current task is the same as the previous task (thus also same color)&amp;#10;                if respCategory[trialIdx-1]!=respCategory[trialIdx-2]:  # if response Category was not the same in the previous two trials --&gt; there is NO risk of having three times in a row the same response Category (e.g., vowel)&amp;#10;                    # &quot;criterion 1&quot; make sure that digit AND/OR letter are different from previous trial (i.e., remove those stimuli from the pools and draw from the resuced pool)    &amp;#10;                    reduceChoice = np.random.randint(1,4)  # Which pool (letter or digit or both) should we reduce? To implement the &quot;AND/OR&quot;, pick a random integer from 1 to 3. 1=reduce only digit pool, 2=reduce only letter pool, 3=reduce both pools&amp;#10;                    if reduceChoice==1:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif reduceChoice==2:&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;                    elif reduceChoice==3:&amp;#10;                        digit_pool_red  = np.delete(digit_pool,   digit_pool.index(digit[trialIdx-1]) )  # reduced pool &amp;#10;                        digit[trialIdx] = np.random.choice(digit_pool_red,1)[0]&amp;#10;                        letter_pool_red = np.delete(letter_pool, letter_pool.index(letter[trialIdx-1]) )  # reduced pool &amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool_red,1)[0]&amp;#10;             &amp;#10;                else:    # if response Category was the same in the previous two trials --&gt; there is risk of having three times in a row the same response Category (e.g., vowel), so we need to exclude the stimuli compatible with this response category (e.g., all vowels)&amp;#10;                    # &quot;criteria 1 and 2&quot;                     &amp;#10;                    if respCategory[trialIdx-1]==&quot;vowel&quot;: &amp;#10;                        # pick any digit, but draw the letter from the consonant pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_consonant_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;consonant&quot;: &amp;#10;                        # pick any digit, but draw the letter from the vowel pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx]  = np.random.choice(digit_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_vowel_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;even&quot;: &amp;#10;                        # pick any letter, but draw the digit from the odd pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_odd_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;                    elif respCategory[trialIdx-1]==&quot;odd&quot;: &amp;#10;                        # pick any letter, but draw the digit from the even pool only. Criterion 1 is also automatically met because in this way the pair is already going to be different from the previous pair&amp;#10;                        digit[trialIdx] = np.random.choice(digit_even_pool,1)[0]&amp;#10;                        letter[trialIdx] = np.random.choice(letter_pool,1)[0]&amp;#10;            &amp;#10;        # create pair of letter + digit&amp;#10;        pair[trialIdx] = letter[trialIdx] + str(digit[trialIdx]) &amp;#10;        &amp;#10;        # now that digit and letter have been chosen, update responseCategory. &amp;#10;        if np.isin(letter[trialIdx],letter_vowel_pool):  vowel[trialIdx] = 1&amp;#10;        else:                                            vowel[trialIdx] = 0&amp;#10;        if np.isin(letter[trialIdx],letter_consonant_pool): consonant[trialIdx] = 1&amp;#10;        else:                                               consonant[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_even_pool):  even[trialIdx] = 1&amp;#10;        else:                                         even[trialIdx] = 0&amp;#10;        if np.isin(digit[trialIdx],digit_odd_pool): odd[trialIdx] = 1&amp;#10;        else:                                       odd[trialIdx] = 0&amp;#10;        if task[trialIdx]==&quot;letter&quot;:&amp;#10;            if vowel[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;vowel&quot;&amp;#10;            elif consonant[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;consonant&quot;&amp;#10;        elif task[trialIdx]==&quot;digit&quot;:&amp;#10;            if even[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;even&quot;&amp;#10;            elif odd[trialIdx]==1:&amp;#10;                respCategory[trialIdx] = &quot;odd&quot;&amp;#10;        &amp;#10;    # criterion &quot;3&quot;&amp;#10;    # multiply task_letter (1=letter task, 0=otherwise) with vowel(1=vowel, 0=otherwise). Their product will identify letter trials with vowel (i.e., it will ignore digit trials where the letter is a vowel). Same concept for the other 3 cases&amp;#10;    task_letter_vowel     = task_letter * vowel&amp;#10;    task_letter_consonant = task_letter * consonant&amp;#10;    task_digit_even       = task_digit * even&amp;#10;    task_digit_odd        = task_digit * odd&amp;#10;    # proportion of expected response, to make sure they are the same (0.25)&amp;#10;    proportionCheck  = np.zeros(4,dtype=&quot;float&quot;) # initialize&amp;#10;    proportionCheck[0] = sum(task_letter_vowel) / trialAll_num&amp;#10;    proportionCheck[1] = sum(task_letter_consonant) / trialAll_num&amp;#10;    proportionCheck[2] = sum(task_digit_even) / trialAll_num&amp;#10;    proportionCheck[3] = sum(task_digit_odd) / trialAll_num&amp;#10;    &amp;#10;    # &quot;criterion 4&quot;&amp;#10;    # check that each digit (same for letter) is picked at least 5% of the times &amp;#10;    digitProportion  = np.empty(len(digit_pool),dtype=float)     &amp;#10;    letterProportion = np.empty(len(letter_pool),dtype=float)     &amp;#10;    for poolIdx in np.arange(0,len(digit_pool)):&amp;#10;        digitProportion[poolIdx]  = sum(digit==digit_pool[poolIdx])/trialAll_num&amp;#10;        letterProportion[poolIdx] = sum(letter==letter_pool[poolIdx])/trialAll_num&amp;#10;    &amp;#10;    # implements the two checks above (keep asking for a new sequence if either of the two checks fails)&amp;#10;    if sum(proportionCheck==0.25)==4 and np.min(digitProportion)&gt;=0.05 and np.min(letterProportion)&gt;=0.05:&amp;#10;        toggleSwitch2 = 0    &amp;#10;     &amp;#10;&quot;&quot;&quot;&amp;#10;========================&amp;#10;c. Assign Response Keys&amp;#10;========================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# %% create expectedResponse&amp;#10;# &quot;f&quot; = consonant &amp; odd&amp;#10;# &quot;j&quot; = vowel &amp; even&amp;#10;&amp;#10;expectedResponse = np.array(['key2press' for _ in np.arange(trialAll_num)])&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;even&quot;,respCategory==&quot;vowel&quot;)]     = &quot;j&quot;&amp;#10;expectedResponse[np.logical_or(respCategory==&quot;odd&quot;, respCategory==&quot;consonant&quot;)] = &quot;f&quot;&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;========================&amp;#10;d. Initialise DataFrame&amp;#10;========================&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# build a dataframe from dictionary&amp;#10;sequenceDataset= pd.DataFrame({'trial': trial,&amp;#10;                               'digit': digit,&amp;#10;                               'even': even,&amp;#10;                               'odd': odd,&amp;#10;                               'letter': letter,&amp;#10;                               'vowel': vowel,&amp;#10;                               'consonant': consonant,&amp;#10;                               'pair': pair,&amp;#10;                               'switch': switch, &amp;#10;                               'condition': condition,&amp;#10;                               'task': task,&amp;#10;                               'task_digit': task_digit,                               &amp;#10;                               'task_letter': task_letter,&amp;#10;                               'task_letter_vowel': task_letter_vowel,&amp;#10;                               'task_letter_consonant': task_letter_consonant,&amp;#10;                               'task_digit_even': task_digit_even,&amp;#10;                               'task_digit_odd': task_digit_odd,&amp;#10;                               'color': color,&amp;#10;                               'colorHex': colorHex,&amp;#10;                               'respCategory': respCategory,&amp;#10;                               'expectedResponse': expectedResponse,&amp;#10;                               'observedResponse': np.nan,&amp;#10;                               'Accuracy': np.nan,&amp;#10;                               'RT_allTrials': np.nan,&amp;#10;                               'RT_correctTrials': np.nan,&amp;#10;                               'trialDuration': np.nan,&amp;#10;                               'step': np.nan})&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="stimuliCode_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="end">
+      <RoutineSettingsComponent name="end" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="end" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <ImageComponent name="endImage" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="end slide.jpg" valType="file" updates="constant" name="image"/>
+        <Param val="endSlide.jpg" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="image" valType="code" updates="None" name="name"/>
+        <Param val="endImage" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
@@ -974,18 +1044,20 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <TextComponent name="text_3" plugin="None">
+      <TextComponent name="endText" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.1" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="text_3" valType="code" updates="None" name="name"/>
+        <Param val="endText" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, -0.8)" valType="list" updates="constant" name="pos"/>
@@ -998,16 +1070,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press bar to submit" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_3" plugin="None">
+      <KeyboardComponent name="moveOn_6" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="key_resp_3" valType="code" updates="None" name="name"/>
+        <Param val="moveOn_6" valType="code" updates="None" name="name"/>
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
@@ -1022,8 +1096,8 @@
     </Routine>
   </Routines>
   <Flow>
-    <Routine name="Instruction"/>
-    <Routine name="Instruction2"/>
+    <Routine name="instructions"/>
+    <Routine name="instructions2"/>
     <LoopInitiator loopType="TrialHandler" name="practiceRepetition">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -1035,8 +1109,8 @@
       <Param name="name" updates="None" val="practiceRepetition" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="startpractice"/>
-    <Routine name="sequenceGeneration"/>
+    <Routine name="startPractice"/>
+    <Routine name="practiceSequenceGeneration"/>
     <LoopInitiator loopType="TrialHandler" name="practiceBlock">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -1053,10 +1127,10 @@
     <LoopTerminator name="practiceBlock"/>
     <Routine name="practiceBlock_feedback"/>
     <LoopTerminator name="practiceRepetition"/>
-    <Routine name="Instruction"/>
-    <Routine name="Instruction2"/>
-    <Routine name="starttask"/>
-    <Routine name="sequenceGeneration_2"/>
+    <Routine name="instructions"/>
+    <Routine name="instructions2"/>
+    <Routine name="startTask"/>
+    <Routine name="taskSequenceGeneration"/>
     <LoopInitiator loopType="TrialHandler" name="experimentalBlock">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
@@ -1071,6 +1145,6 @@
     <Routine name="experimentalTrial"/>
     <Routine name="blank"/>
     <LoopTerminator name="experimentalBlock"/>
-    <Routine name="End"/>
+    <Routine name="end"/>
   </Flow>
 </PsychoPy2experiment>
