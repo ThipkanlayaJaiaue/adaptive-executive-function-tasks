@@ -61,11 +61,13 @@ Experimental block
 *a. Trial Numbers and Distributions*
 
 -Total trial number ⚠️ Please note that a higher number of trials may result in longer sequence generation times due to strict constraints.
+
 -Proportion of trial types
 
 *b. Trial Sequence Generation*
 
 Defines how trials are ordered and how predictable the sequence is.
+
 -*b.1 Assign Stimuli Pool*: define stimulus pool(s)
 
 *c. Assign Response Keys*
