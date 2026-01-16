@@ -42,7 +42,7 @@ Detailed task configurations can be found in the published paper and its supplem
 
 
 
-* **Stimulus Sequences Control**
+**1.1 Stimulus Sequences Control**
 
 Practice block
 
@@ -55,25 +55,27 @@ Experimental block
 - Location: *End Routine* of `taskSequenceGeneration`
 
 
-> * 🧩 Within these components, you can manipulate task parameters and predictability under the following sections:*
-
+> 🧩 Within these components, you can manipulate task parameters and predictability under the following sections:
 
 
 *a. Trial Numbers and Distributions*
+
 -Total trial number ⚠️ Please note that a higher number of trials may result in longer sequence generation times due to strict constraints.
 -Proportion of trial types
 
 *b. Trial Sequence Generation*
+
 Defines how trials are ordered and how predictable the sequence is.
 -*b.1 Assign Stimuli Pool*: define stimulus pool(s)
 
 *c. Assign Response Keys*
+
 -Set response keys for the task 
 ⚠️ Must also match the allowedKeys field of the xxResp(_x) component in `practiceTrial` and `experimentalTrial`
 
 
 
-* **Data Identification and Recording**
+**1.2 Data Identification and Recording**
 - Controlled in the addData(_x) component
 - Location: *End Routine* of `practiceTrial` or `experimentalTrial`
 
