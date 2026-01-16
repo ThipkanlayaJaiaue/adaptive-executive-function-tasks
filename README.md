@@ -64,11 +64,11 @@ Experimental block
 
 -Proportion of trial types
 
-*b. Trial Sequence Generation*
 
-Defines how trials are ordered and how predictable the sequence is.
+*b. Trial Sequence Generation*: defines how trials are ordered and how predictable the sequence is
 
 -*b.1 Assign Stimuli Pool*: define stimulus pool(s)
+
 
 *c. Assign Response Keys*
 
@@ -87,19 +87,19 @@ Defines how trials are ordered and how predictable the sequence is.
 
 ### 2. Practice Block Settings
 
-* **Feedback for Each Trial**
+**2.1 Feedback for Each Trial**
 - Text and colour controlled in fbCode component
 - Location: *Begin Routine* of `practiceTrial_feedback`
 
-* **Calculation of Individualized Trial Duration**
+**2.2 Calculation of Individualized Trial Duration**
 - Controlled in fbCode_2 component
 - Location: *Begin Routine* of `practiceBlock_feedback`
 
-* **Target Accuracy Threshold**
+**2.3 Target Accuracy Threshold**
 - Controlled in fbCode_2 component
 - Location: *End Routine* of `practiceBlock_feedback`
 
-* **Practice Repetition**
+**2.4 Practice Repetition**
 - Controlled in the `nReps` field of the `practiceRepetition` loop
 
 
@@ -109,11 +109,11 @@ Defines how trials are ordered and how predictable the sequence is.
 ### 3. Experimental Block Settings
 
 
-* **Calling Initial Trial Duration from the Practice Block**
+**3.1 Calling Initial Trial Duration from the Practice Block**
 - Controlled in the addData(_x) component 
 - Location: #adaptive or trial duration in *Begin Routine* of `experimentalTrial`
 
-* Adaptation Criteria (adaptive version only)
+**3.2 Adaptation Criteria (adaptive version only)**
 - Controlled in the addData(_x) component
 - Location: #adaption in *End Routine* of `experimentalTrial`
 
