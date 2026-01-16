@@ -45,12 +45,14 @@ Detailed task configurations can be found in the published paper and its supplem
 * **Stimulus Sequences Control**
 
 Practice block
-\- Controlled in the stimuliCode component
-\- Location: *End Routine* of `practiceSequenceGeneration`
+
+- Controlled in the stimuliCode component
+- Location: *End Routine* of `practiceSequenceGeneration`
 
 Experimental block
-\- Controlled in the stimuliCode_2 component
-\- Location: *End Routine* of `taskSequenceGeneration`
+
+- Controlled in the stimuliCode_2 component
+- Location: *End Routine* of `taskSequenceGeneration`
 
 
 > * 🧩 Within these components, you can manipulate task parameters and predictability under the following sections:*
