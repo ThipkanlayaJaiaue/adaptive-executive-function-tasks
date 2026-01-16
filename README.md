@@ -24,9 +24,7 @@ All tasks are compatible with *PsychoPy version 2025.1.1*
 Each task includes:
 
 1\. Instructions
-
 2\. A practice block
-
 3\. An experimental block
 
 
