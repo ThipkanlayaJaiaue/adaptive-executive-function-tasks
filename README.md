@@ -46,13 +46,13 @@ Detailed task configurations can be found in the published paper and its supplem
 
 Practice block
 
-- Controlled in the stimuliCode component
-- Location: *End Routine* of `practiceSequenceGeneration`
+- Controlled in the *End Routine* of stimuliCode component
+- Location: `practiceSequenceGeneration`
 
 Experimental block
 
-- Controlled in the stimuliCode_2 component
-- Location: *End Routine* of `taskSequenceGeneration`
+- Controlled in the *End Routine* of stimuliCode_2 component
+- Location:  `taskSequenceGeneration`
 
 
 > 🧩 Within these components, you can manipulate task parameters and predictability under the following sections:
@@ -78,8 +78,8 @@ Experimental block
 
 
 **1.2 Data Identification and Recording**
-- Controlled in the addData(_x) component
-- Location: *End Routine* of `practiceTrial` or `experimentalTrial`
+- Controlled in the *End Routine* of addData(_x) component
+- Location:  `practiceTrial` or `experimentalTrial`(`practiceResponse` or `experimentalResponse` in Spatial-Figural Updating Task)
 
 
 ---
@@ -88,16 +88,16 @@ Experimental block
 ### 2. Practice Block Settings
 
 **2.1 Feedback for Each Trial**
-- Text and colour controlled in fbCode component
-- Location: *Begin Routine* of `practiceTrial_feedback`
+- Text and colour controlled in the *Begin Routine* of fbCode component
+- Location:  `practiceTrial_feedback`
 
 **2.2 Calculation of Individualized Trial Duration**
-- Controlled in fbCode_2 component
-- Location: *Begin Routine* of `practiceBlock_feedback`
+- Controlled in the *Begin Routine* of fbCode_2 component
+- Location:  `practiceBlock_feedback`
 
 **2.3 Target Accuracy Threshold**
-- Controlled in fbCode_2 component
-- Location: *End Routine* of `practiceBlock_feedback`
+- Controlled in the *End Routine* of fbCode_2 component
+- Location:  `practiceBlock_feedback`
 
 **2.4 Practice Repetition**
 - Controlled in the `nReps` field of the `practiceRepetition` loop
@@ -110,12 +110,12 @@ Experimental block
 
 
 **3.1 Calling Initial Trial Duration from the Practice Block**
-- Controlled in the addData(_x) component 
-- Location: #adaptive or trial duration in *Begin Routine* of `experimentalTrial`
+- Controlled under *#adaptive or trial duration* in the *Begin Routine* of addData(_x) component 
+- Location:  `experimentalTrial`
 
 **3.2 Adaptation Criteria (adaptive version only)**
-- Controlled in the addData(_x) component
-- Location: #adaption in *End Routine* of `experimentalTrial`
+- Controlled under *#adaption* in *End Routine* of addData(_x) component (*Begin Routine* of endSetCode_2 component in Spatial-Figural Updating Task)
+- Location:  `experimentalTrial` (`experimentalUpdateAccuracy_tot` in Spatial-Figural Updating Task)
 
 ---
 
