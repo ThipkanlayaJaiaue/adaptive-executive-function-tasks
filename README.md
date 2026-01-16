@@ -58,19 +58,19 @@ Experimental block
 > 🧩 Within these components, you can manipulate task parameters and predictability under the following sections:
 
 
-*a. Trial Numbers and Distributions*
+**a. Trial Numbers and Distributions**
 
 -Total trial number ⚠️ Please note that a higher number of trials may result in longer sequence generation times due to strict constraints.
 
 -Proportion of trial types
 
 
-*b. Trial Sequence Generation*: defines how trials are ordered and how predictable the sequence is
+**b. Trial Sequence Generation**: defines how trials are ordered and how predictable the sequence is
 
--*b.1 Assign Stimuli Pool*: define stimulus pool(s)
+-**b.1 Assign Stimuli Pool**: define stimulus pool(s)
 
 
-*c. Assign Response Keys*
+**c. Assign Response Keys**
 
 -Set response keys for the task 
 ⚠️ Must also match the allowedKeys field of the xxResp(_x) component in `practiceTrial` and `experimentalTrial`
