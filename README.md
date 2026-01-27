@@ -27,7 +27,7 @@ Each task includes:
 
 3\. An experimental block
 
-It also includes a processing script *processXXX.py* to process collected data into a dataframe
+It also includes a processing script '*processXXX.py*' to process collected data into a dataframe
 
 
 
