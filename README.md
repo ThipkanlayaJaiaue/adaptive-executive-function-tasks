@@ -31,8 +31,6 @@ It also includes a processing script '*processXXX.py*' to process collected data
 
 
 
----
-
 
 
 ### 1. Both Practice and Experimental Blocks
@@ -79,7 +77,7 @@ Experimental block
 - Location:  `practiceTrial` or `experimentalTrial`(`practiceResponse` or `experimentalResponse` in Spatial-Figural Updating Task)
 
 
----
+
 
 
 ### 2. Practice Block Settings
@@ -100,7 +98,7 @@ Experimental block
 - Controlled in the `nReps` field of the `practiceRepetition` loop
 
 
----
+
 
 
 ### 3. Experimental Block Settings
