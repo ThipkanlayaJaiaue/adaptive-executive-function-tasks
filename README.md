@@ -4,13 +4,11 @@
 
 This repository contains **5 executive function tasks**, each implemented in **3 different versions (control, standard, adaptive)**
 
-
-
-> ⚠️ The Stop-Signal Task (Verbruggen et al., 2008) is publicly available at https://github.com/fredvbrug/STOP-IT.
+All tasks are compatible with *PsychoPy version 2025.1.1* and detailed task configurations can be found in the published paper (Jaiaue et al., under review) and its supplementary material.
 
 
 
-All tasks are compatible with *PsychoPy version 2025.1.1*
+> The Stop-Signal Task (Verbruggen et al., 2008) is publicly available at https://github.com/fredvbrug/STOP-IT.
 
 
 
@@ -30,8 +28,6 @@ Each task includes:
 3\. An experimental block
 
 It also includes a processing script *processXXX.py* to process collected data into a dataframe
-
-Detailed task configurations can be found in the published paper and its supplementary material
 
 
 
