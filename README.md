@@ -29,6 +29,7 @@ Each task includes:
 
 3\. An experimental block
 
+It also includes a processing script *processXXX.py* to process collected data into a dataframe
 
 Detailed task configurations can be found in the published paper and its supplementary material
 
@@ -116,6 +117,16 @@ Experimental block
 **3.2 Adaptation Criteria (adaptive version only)**
 - Controlled under *#adaption* in *End Routine* of addData_x component (*Begin Routine* of endSetCode_2 component in Spatial-Figural Updating Task)
 - Location:  `experimentalTrial` (`experimentalUpdateAccuracy_tot` in Spatial-Figural Updating Task)
+
+
+---
+
+
+### 🗃️ **Process the data**
+
+Data collected from each task can be processed using *processXXX.py*, which can be found inside the respective task folder.
+⚠️ Make sure the list of folder paths (line 7) is updated to match the location of your data folder(s).
+
 
 ---
 
