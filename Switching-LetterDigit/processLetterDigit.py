@@ -20,10 +20,10 @@ for files in range(0, len(switching_filelist)):
         # create variables for numbers of switch/repeat/total trials for future calculation
         switch_num = len(switching_data[switching_data['myExp.condition'] == 'switch'])
         repeat_num = len(switching_data[switching_data['myExp.condition'] == 'repeat'])
-        total_trials = switching_data["myExp.trial"].max()
-        correctTrials_all = switching_data["myExp.RT_correctTrials"]
-        correctTrials_switch = switching_data.loc[switching_data['myExp.condition'] == 'switch', "myExp.RT_correctTrials"]
-        correctTrials_repeat = switching_data.loc[switching_data['myExp.condition'] == 'repeat', "myExp.RT_correctTrials"]
+        total_trials = switching_data['myExp.trial'].max()
+        correctTrials_all = switching_data['myExp.RT_correctTrials']
+        correctTrials_switch = switching_data.loc[switching_data['myExp.condition'] == 'switch', 'myExp.RT_correctTrials']
+        correctTrials_repeat = switching_data.loc[switching_data['myExp.condition'] == 'repeat', 'myExp.RT_correctTrials']
 
         # create medianRT variables
         medianRT_all = correctTrials_all.median() * 1000
@@ -32,12 +32,12 @@ for files in range(0, len(switching_filelist)):
         medianRT_diff = medianRT_switch - medianRT_repeat
 
         # create accuracy variables
-        accuracy_all = (switching_data["myExp.Accuracy"].sum() / total_trials) * 100
-        accuracy_switch = (switching_data.loc[switching_data['myExp.condition'] == 'switch', "myExp.Accuracy"].sum() / switch_num) * 100
-        accuracy_repeat = (switching_data.loc[switching_data['myExp.condition'] == 'repeat', "myExp.Accuracy"].sum() / repeat_num) * 100
+        accuracy_all = (switching_data['myExp.Accuracy'].sum() / total_trials) * 100
+        accuracy_switch = (switching_data.loc[switching_data['myExp.condition'] == 'switch', 'myExp.Accuracy'].sum() / switch_num) * 100
+        accuracy_repeat = (switching_data.loc[switching_data['myExp.condition'] == 'repeat', 'myExp.Accuracy'].sum() / repeat_num) * 100
 
         # create trial duration variables
-        median_trial_duration = switching_data["myExp.trialDuration"].median() * 1000
+        median_trial_duration = switching_data['myExp.trialDuration'].median() * 1000
 
         # creat completion time variable
         completion_time = switching_data['blank.stopped'].max() - switching_data['experimentalTrial.started'].min()
@@ -47,8 +47,8 @@ for files in range(0, len(switching_filelist)):
             = accuracy_all = accuracy_switch = accuracy_repeat = median_trial_duration = None
 
     # append values into the list
-    data_list.append({'participant': switching_data.iloc[1]["participant"],
-                      'task': switching_data.iloc[1]["expName"],
+    data_list.append({'participant': switching_data.iloc[1]['participant'],
+                      'task': switching_data.iloc[1]['expName'],
                       'medianRT_correct_all(ms)': medianRT_all,
                       'medianRT_correct_switch(ms)': medianRT_switch,
                       'medianRT_correct_repeat(ms)': medianRT_repeat,

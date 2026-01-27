@@ -18,13 +18,13 @@ for files in range(0, len(SFU_filelist)):
     # create if condition to work with the data
     if 'experimentalBlock.thisN' in SFU.columns:
         # create variables for numbers of total trials and total sets for future calculation
-        set_num = SFU["myExp.trial"].max()
+        set_num = SFU['myExp.trial'].max()
 
         # create accuracy variables
-        accuracy = ((SFU["myExp.Accuracy_Mean"] == 1).sum() / set_num) * 100 # only count when recall correctly for all colours in a set
+        accuracy = ((SFU['myExp.Accuracy_Mean'] == 1).sum() / set_num) * 100 # only count when recall correctly for all colours in a set
 
         # create trial duration variables
-        median_trialDuration = SFU["myExp.gridDuration"].median() * 1000
+        median_trialDuration = SFU['myExp.gridDuration'].median() * 1000
 
         # creat completion time variable
         completion_time = SFU['experimentalUpdateAccuracy_tot.stopped'].max() - SFU['experimentalTrial.started'].min()
@@ -33,8 +33,8 @@ for files in range(0, len(SFU_filelist)):
         accuracy = median_trialDuration = None
 
     # append values into the list
-    data_list.append({'participant': SFU.iloc[1]["participant"],
-                      'task': SFU.iloc[1]["expName"],
+    data_list.append({'participant': SFU.iloc[1]['participant'],
+                      'task': SFU.iloc[1]['expName'],
                       'accuracy(%)': accuracy,
                       'median_trialDuration(ms)': median_trialDuration,
                       'completion_time(s)': completion_time})

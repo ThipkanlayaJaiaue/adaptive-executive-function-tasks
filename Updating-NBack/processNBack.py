@@ -20,10 +20,10 @@ for files in range(0, len(nBack_filelist)):
         # create variables for numbers of match/non-match/total trials for future calculation
         match_num = len(nBack[nBack['myExp.nback_match'] == 1])
         nonmatch_num = len(nBack[nBack['myExp.nback_match'] == 0])
-        total_trials = nBack["myExp.trial"].max()
-        correctTrial_all = nBack["myExp.RT_correctTrials"]
-        correctTrial_match = nBack.loc[nBack['myExp.nback_match'] == 1, "myExp.RT_correctTrials"]
-        correctTrial_nonmatch = nBack.loc[nBack['myExp.nback_match'] == 0, "myExp.RT_correctTrials"]
+        total_trials = nBack['myExp.trial'].max()
+        correctTrial_all = nBack['myExp.RT_correctTrials']
+        correctTrial_match = nBack.loc[nBack['myExp.nback_match'] == 1, 'myExp.RT_correctTrials']
+        correctTrial_nonmatch = nBack.loc[nBack['myExp.nback_match'] == 0, 'myExp.RT_correctTrials']
 
         # create medianRT variables
         medianRT_correct_all = correctTrial_all.median() * 1000
@@ -32,12 +32,12 @@ for files in range(0, len(nBack_filelist)):
         medianRT_diff = medianRT_correct_match - medianRT_correct_nonmatch
 
         # create accuracy variables
-        accuracy_all = (nBack["myExp.Accuracy"].sum() / total_trials) * 100
-        accuracy_match = (nBack.loc[nBack['myExp.nback_match'] == 1, "myExp.Accuracy"].sum() / match_num) * 100
-        accuracy_nonmatch = (nBack.loc[nBack['myExp.nback_match'] == 0, "myExp.Accuracy"].sum() / nonmatch_num) * 100
+        accuracy_all = (nBack['myExp.Accuracy'].sum() / total_trials) * 100
+        accuracy_match = (nBack.loc[nBack['myExp.nback_match'] == 1, 'myExp.Accuracy'].sum() / match_num) * 100
+        accuracy_nonmatch = (nBack.loc[nBack['myExp.nback_match'] == 0, 'myExp.Accuracy'].sum() / nonmatch_num) * 100
 
         # create trial duration variables
-        median_trial_duration = nBack["myExp.trialDuration"].median() * 1000
+        median_trial_duration = nBack['myExp.trialDuration'].median() * 1000
 
         # creat completion time variable
         completion_time = nBack['blank.stopped'].max() - nBack['experimentalTrial.started'].min()
@@ -47,8 +47,8 @@ for files in range(0, len(nBack_filelist)):
             = accuracy_all = accuracy_match = accuracy_nonmatch = median_trial_duration = None
 
     # append values into the list
-    data_list.append({'participant': nBack.iloc[1]["participant"],
-                      'task': nBack.iloc[1]["expName"],
+    data_list.append({'participant': nBack.iloc[1]['participant'],
+                      'task': nBack.iloc[1]['expName'],
                       'medianRT_correct_all(ms)': medianRT_correct_all,
                       'medianRT_correct_match(ms)': medianRT_correct_match,
                       'medianRT_correct_nonmatch(ms)': medianRT_correct_nonmatch,
