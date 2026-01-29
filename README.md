@@ -8,7 +8,7 @@ All tasks are compatible with *PsychoPy version 2025.1.1* and detailed task conf
 
 
 
-> The Stop-Signal Task (Verbruggen et al., 2008) is publicly available at https://github.com/fredvbrug/STOP-IT.
+> The Stop-Signal Task (Verbruggen et al., 2008), which was also employed in the study, is publicly available at https://github.com/fredvbrug/STOP-IT.
 
 
 
