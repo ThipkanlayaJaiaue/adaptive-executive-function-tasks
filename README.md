@@ -4,7 +4,7 @@
 
 This repository contains **5 executive function tasks**, each implemented in **3 different versions (control, standard, adaptive)**
 
-All tasks are compatible with *PsychoPy version 2025.1.1* and detailed task configurations can be found in *"Executive Function and Task Engagement in Workload and Fatigue: A Multi-Task Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
+All tasks are compatible with *PsychoPy version 2025.1.1* and detailed task configurations can be found in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
 
 
 
