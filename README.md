@@ -16,9 +16,9 @@ All tasks are compatible with *PsychoPy version 2025.1.1*
 
 ---
 
-Detailed task configurations can be found in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
+📚 Detailed task configurations are described in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
 
-**Researchers interested in using these tasks prior to publication are welcome to contact the authors for further information.**
+**ℹ️ Researchers interested in using these tasks prior to publication are welcome to contact the authors for further information.**
 
 
 ---
