@@ -2,7 +2,7 @@
 
 
 
-This repository contains six folders, one for each of the **6 executive function tasks**. 
+This repository contains six folders, one for each of the **6 executive function tasks**. /n
 Each task implemented in **3 different versions (control, standard, adaptive)** , while the stop-signal task is implemented only in a control version.
 
 Each folder also includes a processing script 'processXXX.py' to process collected data into a dataframe
