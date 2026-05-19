@@ -2,9 +2,7 @@
 
 
 
-This repository contains six folders, one for each of the **6 executive function tasks**.
-
-These tasks are grouped into three core executive function domains (inhibition, switching, and updating), with each domain including two tasks corresponding to two information-processing modalities (verbal and non-verbal).
+This repository contains six folders, one for each of the **6 executive function tasks**. These tasks are grouped into three core executive function domains (inhibition, switching, and updating), with each domain including two tasks corresponding to two information-processing modalities (verbal and non-verbal).
 
 
 
