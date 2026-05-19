@@ -4,6 +4,10 @@
 
 This repository contains six folders, one for each of the **6 executive function tasks**.
 
+These tasks are grouped into three core executive function domains (inhibition, switching, and updating), with each domain including two tasks corresponding to two information-processing modalities (verbal and non-verbal).
+
+
+
 Each task implemented in **3 different versions (control, standard, adaptive)** , while the stop-signal task is implemented only in a control version.
 
 Each folder also includes a processing script 'processXXX.py' to process collected data into a dataframe
