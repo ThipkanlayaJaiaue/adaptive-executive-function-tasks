@@ -2,7 +2,7 @@
 
 
 
-This repository contains **6 executive function tasks**, each implemented in **3 different versions (control, standard, adaptive)**with the exception of the stop-signal task, which is implemented only in a control version.
+This repository contains **6 executive function tasks**, each implemented in **3 different versions (control, standard, adaptive)** with the exception of the stop-signal task, which is implemented only in a control version.
 
 All tasks are compatible with *PsychoPy version 2025.1.1* and detailed task configurations can be found in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
 
