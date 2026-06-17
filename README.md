@@ -1,4 +1,4 @@
-# Executive Function Tasks
+# **Executive Function Tasks**
 
 
 
@@ -12,7 +12,7 @@ Each task implemented in **3 different versions (control, standard, adaptive)** 
 
 Each folder also includes a processing script 'processXXX.py' to process collected data into a dataframe
 
-All tasks are compatible with *PsychoPy version 2025.1.1*
+###### *All tasks are compatible with *PsychoPy version 2025.1.1**
 
 ---
 
@@ -131,7 +131,8 @@ Data collected from each task can be processed using *processXXX.py*, which can 
 
 ---
 
-***Please cite: Gallicchio, G., & Jaiaue, T. (2026). Adaptive-executive-function-tasks. Zenodo. https://doi.org/10.5281/zenodo.18416064***
+### How to cite: Gallicchio, G., & Jaiaue, T. (2026). Adaptive-executive-function-tasks. Zenodo. https://doi.org/10.5281/zenodo.18416064***
 
+---
 **Questions or bug reports?**
 📧 Please contact: thipkanlayajaiaue@gmail.com
