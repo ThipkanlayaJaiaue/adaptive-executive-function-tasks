@@ -131,7 +131,7 @@ Data collected from each task can be processed using *processXXX.py*, which can 
 
 ---
 
-### **How to cite**
+### ❝ ❞ **How to cite**
 
 **Gallicchio, G., & Jaiaue, T. (2026). Adaptive-executive-function-tasks. Zenodo. https://doi.org/10.5281/zenodo.18416064**
 
