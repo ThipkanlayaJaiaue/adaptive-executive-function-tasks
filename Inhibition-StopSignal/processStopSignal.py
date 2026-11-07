@@ -6,7 +6,7 @@ import numpy as np
 ''' please add folders paths below '''
 stopsig_folder = glob.glob(r"D:\PhD\study1\executive-function-tasks\Inhibition-StopSignal\Control\data\*.csv")
 stopsig_filelist = [file for file in stopsig_folder]
-print(stopsig_filelist)
+
 # create an empty list to store data
 data_list = []
 
@@ -27,7 +27,7 @@ for file in range(0, len(stopsig_filelist)):
         median_trial_duration = stopsig["myExp.trialDuration"].median() * 1000
 
         # creat completion time variable
-        completion_time = stopsig['blank.stopped'].max() - stopsig['experimentalTrial.started'].min()
+        completion_time = stopsig['experimentalTrial.stopped'].max() - stopsig['experimentalTrial.started'].min()
 
         # append values into the list
         data_list.append({
@@ -37,6 +37,7 @@ for file in range(0, len(stopsig_filelist)):
             'accuracy_go(%)': accuracy_go,
             'median_trialDuration(ms)': median_trial_duration,
             'completion_time(s)': completion_time})
+
 stopSignal_data_long = pd.DataFrame(data_list)
 
 # save as csv
