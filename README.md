@@ -8,8 +8,6 @@ This repository contains six folders, one for each of the **6 executive function
 
 Each task implemented in **3 different versions (control, standard, adaptive)** , while the stop-signal task is implemented only in a control version.
 
-> The standard and adaptive Stop-Signal Task implementations used in this study are based on Verbruggen et al. (2008) and are available at https://github.com/fredvbrug/STOP-IT.
-
 Each folder also includes a processing script 'processXXX.py' to process collected data into a dataframe
 
 ###### *All tasks are compatible with *PsychoPy version 2025.1.1**
