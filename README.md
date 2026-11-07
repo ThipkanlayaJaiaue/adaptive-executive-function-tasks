@@ -1,4 +1,4 @@
-# Executive Function Tasks
+# **Executive Function Tasks**
 
 
 
@@ -12,13 +12,13 @@ Each task implemented in **3 different versions (control, standard, adaptive)** 
 
 Each folder also includes a processing script 'processXXX.py' to process collected data into a dataframe
 
-All tasks are compatible with *PsychoPy version 2025.1.1*
+###### *All tasks are compatible with *PsychoPy version 2025.1.1**
 
 ---
 
-Detailed task configurations can be found in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
+📚 Detailed task configurations are described in *"Executive Function and Task Engagement in Workload and Mental Fatigue: A Multi-Domain Study Using a Novel Adaptive Paradigm" (Jaiaue et al., under review)* and its supplementary material.
 
-**Researchers interested in using these tasks prior to publication are welcome to contact the authors for further information.**
+**ℹ️ Researchers interested in using these tasks prior to publication are welcome to contact the authors for further information.**
 
 
 ---
@@ -131,7 +131,10 @@ Data collected from each task can be processed using *processXXX.py*, which can 
 
 ---
 
-***Please cite: Gallicchio, G., & Jaiaue, T. (2026). Adaptive-executive-function-tasks. Zenodo. https://doi.org/10.5281/zenodo.18416064***
+### ❝ ❞ **How to cite**
 
+**Gallicchio, G., & Jaiaue, T. (2026). Adaptive-executive-function-tasks. Zenodo. https://doi.org/10.5281/zenodo.18416064**
+
+---
 **Questions or bug reports?**
 📧 Please contact: thipkanlayajaiaue@gmail.com
