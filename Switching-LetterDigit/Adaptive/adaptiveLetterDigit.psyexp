@@ -101,19 +101,19 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;otherInfo.trial&quot;, sequenceDataset.trial[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.letter&quot;, sequenceDataset.letter[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.nback_match&quot;, sequenceDataset.nback_match[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.expectedResponse&quot;, sequenceDataset.expectedResponse[practiceBlock.thisN]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# add data about the sequence&amp;#10;thisExp.addData('myPract.trial',   sequenceDataset.trial[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.digit',   sequenceDataset.digit[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.letter',  sequenceDataset.letter[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.pair',    sequenceDataset.pair[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.switch',    sequenceDataset.switch[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.condition', sequenceDataset.condition[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.task',      sequenceDataset.task[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.color',     sequenceDataset.color[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.respCategory', sequenceDataset.respCategory[practiceBlock.thisN])&amp;#10;thisExp.addData('myPract.expectedResponse', sequenceDataset.expectedResponse[practiceBlock.thisN])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# add data about the sequence&amp;#10;thisExp.addData('myPract.trial', sequenceDataset.loc[practiceBlock.thisN, 'trial'])&amp;#10;thisExp.addData('myPract.digit', sequenceDataset.loc[practiceBlock.thisN, 'digit'])&amp;#10;thisExp.addData('myPract.letter', sequenceDataset.loc[practiceBlock.thisN, 'letter'])&amp;#10;thisExp.addData('myPract.pair', sequenceDataset.loc[practiceBlock.thisN, 'pair'])&amp;#10;thisExp.addData('myPract.switch', sequenceDataset.loc[practiceBlock.thisN, 'switch'])&amp;#10;thisExp.addData('myPract.condition', sequenceDataset.loc[practiceBlock.thisN, 'condition'])&amp;#10;thisExp.addData('myPract.task', sequenceDataset.loc[practiceBlock.thisN, 'task'])&amp;#10;thisExp.addData('myPract.color', sequenceDataset.loc[practiceBlock.thisN, 'color'])&amp;#10;thisExp.addData('myPract.respCategory', sequenceDataset.loc[practiceBlock.thisN, 'respCategory'])&amp;#10;thisExp.addData('myPract.expectedResponse', sequenceDataset.loc[practiceBlock.thisN, 'expectedResponse'])" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# observed response&amp;#10;if letterdigitResp.keys:&amp;#10;    sequenceDataset.observedResponse[practiceBlock.thisN] = letterdigitResp.keys&amp;#10;thisExp.addData('myPract.observedResponse',   sequenceDataset.observedResponse[practiceBlock.thisN])&amp;#10;&amp;#10;&amp;#10;# Accuracy&amp;#10;sequenceDataset.Accuracy[practiceBlock.thisN]             = int(sequenceDataset.observedResponse[practiceBlock.thisN] == sequenceDataset.expectedResponse[practiceBlock.thisN]) &amp;#10;thisExp.addData('myPract.Accuracy',         sequenceDataset.Accuracy[practiceBlock.thisN])&amp;#10;&amp;#10;# RT all trials&amp;#10;sequenceDataset.RT_allTrials[practiceBlock.thisN]         = letterdigitResp.rt&amp;#10;thisExp.addData('myPract.RT_allTrials',     sequenceDataset.RT_allTrials[practiceBlock.thisN])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.Accuracy[practiceBlock.thisN] == 1:&amp;#10;    sequenceDataset.RT_correctTrials[practiceBlock.thisN] = letterdigitResp.rt&amp;#10;    thisExp.addData('myPract.RT_correctTrials',     sequenceDataset.RT_correctTrials[practiceBlock.thisN])&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="# observed response&amp;#10;if letterdigitResp.keys:&amp;#10;    sequenceDataset.loc[practiceBlock.thisN, 'observedResponse'] = letterdigitResp.keys&amp;#10;thisExp.addData('myPract.observedResponse', sequenceDataset.loc[practiceBlock.thisN, 'observedResponse'])&amp;#10;&amp;#10;# Accuracy&amp;#10;sequenceDataset.loc[practiceBlock.thisN, 'Accuracy'] = int(sequenceDataset.loc[practiceBlock.thisN, 'observedResponse'] == sequenceDataset.loc[practiceBlock.thisN, 'expectedResponse'])&amp;#10;thisExp.addData('myPract.Accuracy', sequenceDataset.loc[practiceBlock.thisN, 'Accuracy'])&amp;#10;&amp;#10;# RT all trials&amp;#10;sequenceDataset.loc[practiceBlock.thisN, 'RT_allTrials'] = letterdigitResp.rt&amp;#10;thisExp.addData('myPract.RT_allTrials', sequenceDataset.loc[practiceBlock.thisN, 'RT_allTrials'])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.loc[practiceBlock.thisN, 'Accuracy'] == 1:&amp;#10;    sequenceDataset.loc[practiceBlock.thisN, 'RT_correctTrials'] = letterdigitResp.rt&amp;#10;    thisExp.addData('myPract.RT_correctTrials', sequenceDataset.loc[practiceBlock.thisN, 'RT_correctTrials'])" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="addData" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="letterdigitStim" plugin="None">
-        <Param val="$str(sequenceDataset.color[practiceBlock.thisN])" valType="color" updates="set every repeat" name="color"/>
+        <Param val="$str(sequenceDataset.loc[practiceBlock.thisN, 'color'])" valType="color" updates="set every repeat" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -134,14 +134,14 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$str(sequenceDataset.pair[practiceBlock.thisN])" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$str(sequenceDataset.loc[practiceBlock.thisN, 'pair'])" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="letterdigitResp" plugin="None">
         <Param val="'f','j'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="$sequenceDataset.expectedResponse[practiceBlock.thisN]" valType="str" updates="constant" name="correctAns"/>
+        <Param val="$sequenceDataset.loc[practiceBlock.thisN, 'expectedResponse']" valType="str" updates="constant" name="correctAns"/>
         <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
@@ -376,19 +376,19 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;otherInfo.trial&quot;, sequenceDataset.trial[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.letter&quot;, sequenceDataset.letter[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.nback_match&quot;, sequenceDataset.nback_match[practiceBlock.thisN]);&amp;#10;psychoJS.experiment.addData(&quot;otherInfo.expectedResponse&quot;, sequenceDataset.expectedResponse[practiceBlock.thisN]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# adaptive duration&amp;#10;if sequenceDataset.trial[experimentalBlock.thisN]&lt;=2:&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = 0.5 + Practice_correctTrials_3qrtRT  # for first 2 trials, use 3rd qrt RT from practice block + 500 ms    &amp;#10;else:&amp;#10;    sequenceDataset.trialDuration[experimentalBlock.thisN] = sequenceDataset.trialDuration[experimentalBlock.thisN-1] + sequenceDataset.step[experimentalBlock.thisN-1]   # for all other trials add a value depending on previous trial accuracy&amp;#10;&amp;#10;&amp;#10;# add data about the sequence&amp;#10;thisExp.addData('myExp.trial',   sequenceDataset.trial[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.digit',   sequenceDataset.digit[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.letter',  sequenceDataset.letter[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.pair',    sequenceDataset.pair[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.switch',    sequenceDataset.switch[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.condition', sequenceDataset.condition[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.task',      sequenceDataset.task[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.color',     sequenceDataset.color[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.respCategory', sequenceDataset.respCategory[experimentalBlock.thisN])&amp;#10;thisExp.addData('myExp.expectedResponse', sequenceDataset.expectedResponse[experimentalBlock.thisN])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# adaptive duration&amp;#10;if sequenceDataset.loc[experimentalBlock.thisN, 'trial'] &lt;= 2:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration'] = 0.5 + Practice_correctTrials_3qrtRT  # for first 2 trials, use 3rd qrt RT from practice block + 500 ms&amp;#10;else:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration'] = sequenceDataset.loc[experimentalBlock.thisN-1, 'trialDuration'] + sequenceDataset.loc[experimentalBlock.thisN-1, 'step']  # for all other trials add a value depending on previous trial accuracy&amp;#10;&amp;#10;&amp;#10;# add data about the sequence&amp;#10;thisExp.addData('myExp.trial', sequenceDataset.loc[experimentalBlock.thisN, 'trial'])&amp;#10;thisExp.addData('myExp.digit', sequenceDataset.loc[experimentalBlock.thisN, 'digit'])&amp;#10;thisExp.addData('myExp.letter', sequenceDataset.loc[experimentalBlock.thisN, 'letter'])&amp;#10;thisExp.addData('myExp.pair', sequenceDataset.loc[experimentalBlock.thisN, 'pair'])&amp;#10;thisExp.addData('myExp.switch', sequenceDataset.loc[experimentalBlock.thisN, 'switch'])&amp;#10;thisExp.addData('myExp.condition', sequenceDataset.loc[experimentalBlock.thisN, 'condition'])&amp;#10;thisExp.addData('myExp.task', sequenceDataset.loc[experimentalBlock.thisN, 'task'])&amp;#10;thisExp.addData('myExp.color', sequenceDataset.loc[experimentalBlock.thisN, 'color'])&amp;#10;thisExp.addData('myExp.respCategory', sequenceDataset.loc[experimentalBlock.thisN, 'respCategory'])&amp;#10;thisExp.addData('myExp.expectedResponse', sequenceDataset.loc[experimentalBlock.thisN, 'expectedResponse'])" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="# observed response&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.observedResponse[experimentalBlock.thisN] = letterdigitResp_2.keys&amp;#10;thisExp.addData('myExp.observedResponse',       sequenceDataset.observedResponse[experimentalBlock.thisN])&amp;#10;&amp;#10;# trialDuration&amp;#10;thisExp.addData('myExp.trialDuration',          sequenceDataset.trialDuration[experimentalBlock.thisN])&amp;#10;&amp;#10;# Accuracy&amp;#10;if sequenceDataset.observedResponse[experimentalBlock.thisN]==np.nan:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(0)&amp;#10;else:&amp;#10;    sequenceDataset.Accuracy[experimentalBlock.thisN]             = int(sequenceDataset.observedResponse[experimentalBlock.thisN] == sequenceDataset.expectedResponse[experimentalBlock.thisN]) &amp;#10;thisExp.addData('myExp.Accuracy',               sequenceDataset.Accuracy[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT all trials&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.RT_allTrials[experimentalBlock.thisN]         = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_allTrials',       sequenceDataset.RT_allTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.Accuracy[experimentalBlock.thisN] == 1:&amp;#10;    sequenceDataset.RT_correctTrials[experimentalBlock.thisN] = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_correctTrials',   sequenceDataset.RT_correctTrials[experimentalBlock.thisN])&amp;#10;&amp;#10;# adaptation&amp;#10;if sequenceDataset.switch[experimentalBlock.thisN]==1:   # for &quot;switch&quot; trials&amp;#10;    if sequenceDataset.Accuracy[experimentalBlock.thisN]==1:&amp;#10;        sequenceDataset.step[experimentalBlock.thisN]    = -0.05    # if correct response, decrease duration&amp;#10;    else:&amp;#10;        sequenceDataset.step[experimentalBlock.thisN]    = +0.05    # otherwise (incorrect or no response), increase duration&amp;#10;else:  # for &quot;repeat&quot; trials&amp;#10;    sequenceDataset.step[experimentalBlock.thisN]    = 0.0  # no step change &amp;#10;thisExp.addData('myExp.step',                   sequenceDataset.step[experimentalBlock.thisN])&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="# observed response&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'observedResponse'] = letterdigitResp_2.keys&amp;#10;thisExp.addData('myExp.observedResponse', sequenceDataset.loc[experimentalBlock.thisN, 'observedResponse'])&amp;#10;&amp;#10;# trialDuration&amp;#10;thisExp.addData('myExp.trialDuration', sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration'])&amp;#10;&amp;#10;# Accuracy&amp;#10;if pd.isna(sequenceDataset.loc[experimentalBlock.thisN, 'observedResponse']):&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'Accuracy'] = int(0)&amp;#10;else:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'Accuracy'] = int(sequenceDataset.loc[experimentalBlock.thisN, 'observedResponse'] == sequenceDataset.loc[experimentalBlock.thisN, 'expectedResponse'])&amp;#10;thisExp.addData('myExp.Accuracy', sequenceDataset.loc[experimentalBlock.thisN, 'Accuracy'])&amp;#10;&amp;#10;# RT all trials&amp;#10;if letterdigitResp_2.keys:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'RT_allTrials'] = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_allTrials', sequenceDataset.loc[experimentalBlock.thisN, 'RT_allTrials'])&amp;#10;&amp;#10;# RT correct trials&amp;#10;if sequenceDataset.loc[experimentalBlock.thisN, 'Accuracy'] == 1:&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'RT_correctTrials'] = letterdigitResp_2.rt&amp;#10;    thisExp.addData('myExp.RT_correctTrials', sequenceDataset.loc[experimentalBlock.thisN, 'RT_correctTrials'])&amp;#10;&amp;#10;# adaptation&amp;#10;if sequenceDataset.loc[experimentalBlock.thisN, 'switch'] == 1:  # for &quot;switch&quot; trials&amp;#10;    if sequenceDataset.loc[experimentalBlock.thisN, 'Accuracy'] == 1:&amp;#10;        sequenceDataset.loc[experimentalBlock.thisN, 'step'] = -0.05  # if correct response, decrease duration&amp;#10;    else:&amp;#10;        sequenceDataset.loc[experimentalBlock.thisN, 'step'] = +0.05  # otherwise (incorrect or no response), increase duration&amp;#10;else:  # for &quot;repeat&quot; trials&amp;#10;    sequenceDataset.loc[experimentalBlock.thisN, 'step'] = 0.0  # no step change&amp;#10;&amp;#10;thisExp.addData('myExp.step', sequenceDataset.loc[experimentalBlock.thisN, 'step'])" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="addData_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="letterdigitStim_2" plugin="None">
-        <Param val="$sequenceDataset.color[experimentalBlock.thisN]" valType="color" updates="set every repeat" name="color"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'color']" valType="color" updates="set every repeat" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -407,21 +407,21 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="$sequenceDataset.trialDuration[experimentalBlock.thisN]" valType="code" updates="constant" name="stopVal"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration']" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$sequenceDataset.pair[experimentalBlock.thisN]" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'pair']" valType="str" updates="set every repeat" name="text"/>
         <Param val="deg" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="letterdigitResp_2" plugin="None">
-        <Param val="'f','j','None'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="$sequenceDataset.expectedResponse[experimentalBlock.thisN]" valType="str" updates="constant" name="correctAns"/>
+        <Param val="'f','j'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'expectedResponse']" valType="str" updates="constant" name="correctAns"/>
         <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="letterdigitResp_2" valType="code" updates="None" name="name"/>
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
@@ -429,7 +429,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="$sequenceDataset.trialDuration[experimentalBlock.thisN]" valType="code" updates="constant" name="stopVal"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration']" valType="code" updates="constant" name="stopVal"/>
         <Param val="first key" valType="str" updates="constant" name="store"/>
         <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
@@ -448,115 +448,52 @@
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(-0.9, 0.5)" valType="list" updates="constant" name="pos"/>
-        <Param val="$sequenceDataset.trial[experimentalBlock.thisN]/trialAll_num" valType="code" updates="set every repeat" name="progress"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'trial']/trialAll_num" valType="code" updates="set every repeat" name="progress"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="(1.8, 0.03)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="$sequenceDataset.trialDuration[experimentalBlock.thisN]" valType="code" updates="constant" name="stopVal"/>
+        <Param val="$sequenceDataset.loc[experimentalBlock.thisN, 'trialDuration']" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="height" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
       </ProgressComponent>
-    </Routine>
-    <Routine name="blank">
-      <RoutineSettingsComponent name="blank" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="blank" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <CodeComponent name="code" plugin="None">
+      <CodeComponent name="expAfterKeyPress" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# decide duration of blank element&amp;#10;if letterdigitResp_2.keys:  # if a response was given, wait for the remainder before next trial&amp;#10;    blankDuration = sequenceDataset.trialDuration[experimentalBlock.thisN] - letterdigitResp_2.rt&amp;#10;else:                 # if no response was given, it means that the time was already over for that trial&amp;#10;    blankDuration = 0&amp;#10;    &amp;#10;# sound of feedback&amp;#10;if letterdigitResp_2.corr:&amp;#10;    sound_volume = 0&amp;#10;else:&amp;#10;    sound_volume = 1" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="# force stimuli to disappear after keypress&amp;#10;if letterdigitResp_2.keys:&amp;#10;    letterdigitStim_2.color = [0, 0, 0]" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (letterdigitResp_2.keys) {&amp;#10;    letterdigitStim_2.color = [0, 0, 0];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="expAfterKeyPress" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <StaticComponent name="blankPeriod" plugin="None">
-        <Param val="" valType="code" updates="None" name="code"/>
+      <CodeComponent name="expTone" plugin="None">
+        <Param val="# sound parameters&amp;#10;errorBeep = sound.Sound(600, secs = 0.050, stereo=True, hamming=False, volume = 1)" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="errorBeep = new sound.Sound(600, {&quot;secs&quot;: 0.05, &quot;stereo&quot;: true, &quot;hamming&quot;: false, &quot;volume&quot;: 1});&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="toggleBeep = false;&amp;#10;tonePlayed = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# for each trial reset error beep parameters&amp;#10;toggleBeep = False&amp;#10;tonePlayed = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="# determine if to play the error beep (within trial duration)&amp;#10;if len(letterdigitResp_2.keys)&gt;0 and letterdigitResp_2.corr!=1:&amp;#10;    toggleBeep = True # incorrect response key within the trial duration&amp;#10;    &amp;#10;# play the error beep&amp;#10;if toggleBeep==True and tonePlayed==False and errorBeep.status!=STARTED:&amp;#10;    errorBeep.play()&amp;#10;    tonePlayed = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (((letterdigitResp_2.keys.length &gt; 0) &amp;&amp; (letterdigitResp_2.corr !== 1))) {&amp;#10;    toggleBeep = true;&amp;#10;}&amp;#10;if ((((toggleBeep === true) &amp;&amp; (tonePlayed === false)) &amp;&amp; (errorBeep.status !== PsychoJS.Status.STARTED))) {&amp;#10;    errorBeep.play();&amp;#10;    tonePlayed = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="if (((letterdigitResp_2.keys === null) &amp;&amp; (letterdigitResp_2.corr !== 1))) {&amp;#10;    toggleBeep = true;&amp;#10;}&amp;#10;if ((((toggleBeep === true) &amp;&amp; (tonePlayed === false)) &amp;&amp; (errorBeep.status !== PsychoJS.Status.STARTED))) {&amp;#10;    errorBeep.play();&amp;#10;    tonePlayed = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# determine if to play the error beep (at end of trial duration)&amp;#10;if letterdigitResp_2.keys==None and letterdigitResp_2.corr!=1:&amp;#10;    toggleBeep = True # no response (where one, correct, was expected) by the end of the trial duration&amp;#10;&amp;#10;# play the error beep&amp;#10;if toggleBeep==True and tonePlayed==False and errorBeep.status!=STARTED:&amp;#10;    errorBeep.play()&amp;#10;    tonePlayed = True" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="blankPeriod" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="code" updates="None" name="saveData"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="$blankDuration" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </StaticComponent>
-      <ProgressComponent name="progressBar_2" plugin="None">
-        <Param val="top-left" valType="str" updates="constant" name="anchor"/>
-        <Param val="None" valType="color" updates="constant" name="borderColor"/>
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="color" updates="constant" name="fillColor"/>
-        <Param val="4" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="progressBar_2" valType="code" updates="None" name="name"/>
-        <Param val="1" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.9, 0.5)" valType="list" updates="constant" name="pos"/>
-        <Param val="$sequenceDataset.trial[experimentalBlock.thisN]/trialAll_num" valType="code" updates="set every repeat" name="progress"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(1.8, 0.03)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="$blankDuration" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="height" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-      </ProgressComponent>
-      <SoundComponent name="fbSound_2" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="False" valType="bool" updates="constant" name="hamming"/>
-        <Param val="1" valType="code" updates="None" name="latencyClass"/>
-        <Param val="fbSound_2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="str" updates="None" name="resample"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="600" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="str" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.050" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="sound_volume" valType="num" updates="set every repeat" name="volume"/>
-      </SoundComponent>
+        <Param val="expTone" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="practiceSequenceGeneration">
       <RoutineSettingsComponent name="practiceSequenceGeneration" plugin="None">
@@ -1143,7 +1080,6 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="experimentalTrial"/>
-    <Routine name="blank"/>
     <LoopTerminator name="experimentalBlock"/>
     <Routine name="end"/>
   </Flow>

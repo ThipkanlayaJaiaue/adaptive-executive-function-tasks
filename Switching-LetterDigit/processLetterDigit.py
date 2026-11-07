@@ -33,18 +33,17 @@ for files in range(0, len(switching_filelist)):
 
         # create accuracy variables
         accuracy_all = (switching_data['myExp.Accuracy'].sum() / total_trials) * 100
-        accuracy_switch = (switching_data.loc[switching_data['myExp.condition'] == 'switch', 'myExp.Accuracy'].sum() / switch_num) * 100
+        accuracy_switch = (switching_data.loc[switching_data['myExp.condition'] == 'switch', 'myExp.Accuracy'].sum() / switch_num) * 100 if switch_num > 0 else None
         accuracy_repeat = (switching_data.loc[switching_data['myExp.condition'] == 'repeat', 'myExp.Accuracy'].sum() / repeat_num) * 100
 
         # create trial duration variables
         median_trial_duration = switching_data['myExp.trialDuration'].median() * 1000
 
         # creat completion time variable
-        completion_time = switching_data['blank.stopped'].max() - switching_data['experimentalTrial.started'].min()
+        completion_time = switching_data['experimentalTrial.stopped'].max() - switching_data['experimentalTrial.started'].min()
 
     else:
-        medianRT_all = medianRT_switch = medianRT_repeat = medianRT_diff \
-            = accuracy_all = accuracy_switch = accuracy_repeat = median_trial_duration = None
+        continue
 
     # append values into the list
     data_list.append({'participant': switching_data.iloc[1]['participant'],

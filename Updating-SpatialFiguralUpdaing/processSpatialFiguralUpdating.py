@@ -30,7 +30,7 @@ for files in range(0, len(SFU_filelist)):
         completion_time = SFU['experimentalUpdateAccuracy_tot.stopped'].max() - SFU['experimentalTrial.started'].min()
 
     else:
-        accuracy = median_trialDuration = None
+        continue
 
     # append values into the list
     data_list.append({'participant': SFU.iloc[1]['participant'],

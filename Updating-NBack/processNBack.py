@@ -25,30 +25,41 @@ for files in range(0, len(nBack_filelist)):
         correctTrial_match = nBack.loc[nBack['myExp.nback_match'] == 1, 'myExp.RT_correctTrials']
         correctTrial_nonmatch = nBack.loc[nBack['myExp.nback_match'] == 0, 'myExp.RT_correctTrials']
 
-        # create medianRT variables
+        # create correct_all variables
         medianRT_correct_all = correctTrial_all.median() * 1000
-        medianRT_correct_match = correctTrial_match.median() * 1000
-        medianRT_correct_nonmatch = correctTrial_nonmatch.median() * 1000
-        medianRT_diff = medianRT_correct_match - medianRT_correct_nonmatch
-
-        # create accuracy variables
         accuracy_all = (nBack['myExp.Accuracy'].sum() / total_trials) * 100
-        accuracy_match = (nBack.loc[nBack['myExp.nback_match'] == 1, 'myExp.Accuracy'].sum() / match_num) * 100
-        accuracy_nonmatch = (nBack.loc[nBack['myExp.nback_match'] == 0, 'myExp.Accuracy'].sum() / nonmatch_num) * 100
 
         # create trial duration variables
         median_trial_duration = nBack['myExp.trialDuration'].median() * 1000
 
         # creat completion time variable
-        completion_time = nBack['blank.stopped'].max() - nBack['experimentalTrial.started'].min()
+        completion_time = nBack['experimentalTrial.stopped'].max() - nBack['experimentalTrial.started'].min()
 
-    else:
-        medianRT_correct_all = medianRT_correct_match = medianRT_correct_nonmatch = medianRT_diff \
-            = accuracy_all = accuracy_match = accuracy_nonmatch = median_trial_duration = None
+        # check task condition
+        task_name = nBack.iloc[1]['expName']
+
+        if 'control' in task_name:
+
+            # Control task: all trials are treated as non-match
+            medianRT_correct_match = np.nan
+            medianRT_correct_nonmatch = medianRT_correct_all
+            medianRT_diff = np.nan
+
+            accuracy_match = np.nan
+            accuracy_nonmatch = accuracy_all
+
+        else:
+            medianRT_correct_match = correctTrial_match.median() * 1000
+            medianRT_correct_nonmatch = correctTrial_nonmatch.median() * 1000
+            medianRT_diff = medianRT_correct_match - medianRT_correct_nonmatch
+
+            accuracy_match = (nBack.loc[nBack['myExp.nback_match'] == 1, 'myExp.Accuracy'].sum() / match_num) * 100
+            accuracy_nonmatch = (nBack.loc[nBack['myExp.nback_match'] == 0, 'myExp.Accuracy'].sum() / nonmatch_num) * 100
+
 
     # append values into the list
-    data_list.append({'participant': nBack.iloc[1]['participant'],
-                      'task': nBack.iloc[1]['expName'],
+    data_list.append({#'participant': nBack.iloc[1]['participant'],
+                      #task': nBack.iloc[1]['expName'],
                       'medianRT_correct_all(ms)': medianRT_correct_all,
                       'medianRT_correct_match(ms)': medianRT_correct_match,
                       'medianRT_correct_nonmatch(ms)': medianRT_correct_nonmatch,
